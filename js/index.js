@@ -5,6 +5,7 @@ var cW;
 var bgColor = "#FF6138";
 var animations = [];
 var circles = [];
+var counter = 0;
 
 var colorPicker = (function() {
   var colors = ["#FF6138", "#FFBE53", "#2980B9", "#282741"];
@@ -39,16 +40,24 @@ function addClickListeners() {
 };
 
 function handleEvent(e) {
-    if (e.touches) { 
+    if (e.touches) {
       e.preventDefault();
       e = e.touches[0];
     }
-    var currentColor = colorPicker.current();
-    var nextColor = colorPicker.next();
-    var targetR = calcPageFillRadius(e.pageX, e.pageY);
-    var rippleSize = Math.min(200, (cW * .4));
-    var minCoverDuration = 1400;
-    
+    if (counter >= 20){
+      var currentColor = "#000000";
+      var nextColor = "#000000";
+      var targetR = calcPageFillRadius(e.pageX, e.pageY);
+      var rippleSize = Math.min(200, (cW * .4));
+      var minCoverDuration = 1400;
+    }else{
+      var currentColor = colorPicker.current();
+      var nextColor = colorPicker.next();
+      var targetR = calcPageFillRadius(e.pageX, e.pageY);
+      var rippleSize = Math.min(200, (cW * .4));
+      var minCoverDuration = 1400;
+    }
+
     var pageFill = new Circle({
       x: e.pageX,
       y: e.pageY,
@@ -65,7 +74,7 @@ function handleEvent(e) {
         removeAnimation(fillAnimation);
       }
     });
-    
+
     var ripple = new Circle({
       x: e.pageX,
       y: e.pageY,
@@ -85,7 +94,7 @@ function handleEvent(e) {
       duration: 900,
       complete: removeAnimation
     });
-    
+
 //    var particles = [];
 //    for (var i=0; i<32; i++) {
 //      var particle = new Circle({
@@ -111,7 +120,7 @@ function handleEvent(e) {
 //    });
     //animations.push(fillAnimation, rippleAnimation, particlesAnimation);
         animations.push(fillAnimation, rippleAnimation);
-
+        counter++;
 }
 
 function extend(a, b){
@@ -170,7 +179,7 @@ var resizeCanvas = function() {
   if (window.CP) {
     // CodePen's loop detection was causin' problems
     // and I have no idea why, so...
-    window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000; 
+    window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000;
   }
   window.addEventListener("resize", resizeCanvas);
   addClickListeners();
@@ -184,13 +193,13 @@ function handleInactiveUser() {
   var inactive = setTimeout(function(){
     fauxClick(cW/2, cH/2);
   }, 2000);
-  
+
   function clearInactiveTimeout() {
     clearTimeout(inactive);
     document.removeEventListener("mousedown", clearInactiveTimeout);
     document.removeEventListener("touchstart", clearInactiveTimeout);
   }
-  
+
   document.addEventListener("mousedown", clearInactiveTimeout);
   document.addEventListener("touchstart", clearInactiveTimeout);
 }
