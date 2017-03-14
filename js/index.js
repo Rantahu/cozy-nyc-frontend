@@ -47,7 +47,7 @@ function handleEvent(e) {
     var nextColor = colorPicker.next();
     var targetR = calcPageFillRadius(e.pageX, e.pageY);
     var rippleSize = Math.min(200, (cW * .4));
-    var minCoverDuration = 750;
+    var minCoverDuration = 1400;
     
     var pageFill = new Circle({
       x: e.pageX,
@@ -86,30 +86,32 @@ function handleEvent(e) {
       complete: removeAnimation
     });
     
-    var particles = [];
-    for (var i=0; i<32; i++) {
-      var particle = new Circle({
-        x: e.pageX,
-        y: e.pageY,
-        fill: currentColor,
-        r: anime.random(24, 48)
-      })
-      particles.push(particle);
-    }
-    var particlesAnimation = anime({
-      targets: particles,
-      x: function(particle){
-        return particle.x + anime.random(rippleSize, -rippleSize);
-      },
-      y: function(particle){
-        return particle.y + anime.random(rippleSize * 1.15, -rippleSize * 1.15);
-      },
-      r: 0,
-      easing: "easeOutExpo",
-      duration: anime.random(1000,1300),
-      complete: removeAnimation
-    });
-    animations.push(fillAnimation, rippleAnimation, particlesAnimation);
+//    var particles = [];
+//    for (var i=0; i<32; i++) {
+//      var particle = new Circle({
+//        x: e.pageX,
+//        y: e.pageY,
+//        fill: currentColor,
+//        r: anime.random(24, 48)
+//      })
+//      particles.push(particle);
+//    }
+//    var particlesAnimation = anime({
+//      targets: particles,
+//      x: function(particle){
+//        return particle.x + anime.random(rippleSize, -rippleSize);
+//      },
+//      y: function(particle){
+//        return particle.y + anime.random(rippleSize * 1.15, -rippleSize * 1.15);
+//      },
+//      r: 0,
+//      easing: "easeOutExpo",
+//      duration: anime.random(1000,1300),
+//      complete: removeAnimation
+//    });
+    //animations.push(fillAnimation, rippleAnimation, particlesAnimation);
+        animations.push(fillAnimation, rippleAnimation);
+
 }
 
 function extend(a, b){
