@@ -95,32 +95,8 @@ function handleEvent(e) {
       complete: removeAnimation
     });
 
-//    var particles = [];
-//    for (var i=0; i<32; i++) {
-//      var particle = new Circle({
-//        x: e.pageX,
-//        y: e.pageY,
-//        fill: currentColor,
-//        r: anime.random(24, 48)
-//      })
-//      particles.push(particle);
-//    }
-//    var particlesAnimation = anime({
-//      targets: particles,
-//      x: function(particle){
-//        return particle.x + anime.random(rippleSize, -rippleSize);
-//      },
-//      y: function(particle){
-//        return particle.y + anime.random(rippleSize * 1.15, -rippleSize * 1.15);
-//      },
-//      r: 0,
-//      easing: "easeOutExpo",
-//      duration: anime.random(1000,1300),
-//      complete: removeAnimation
-//    });
-    //animations.push(fillAnimation, rippleAnimation, particlesAnimation);
-        animations.push(fillAnimation, rippleAnimation);
-        counter++;
+    animations.push(fillAnimation, rippleAnimation);
+    counter++;
 }
 
 function extend(a, b){
@@ -176,33 +152,12 @@ var resizeCanvas = function() {
 
 (function init() {
   resizeCanvas();
-  if (window.CP) {
-    // CodePen's loop detection was causin' problems
-    // and I have no idea why, so...
-    window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000;
-  }
   window.addEventListener("resize", resizeCanvas);
   addClickListeners();
   if (!!window.location.pathname.match(/fullcpgrid/)) {
     startFauxClicking();
   }
-  handleInactiveUser();
 })();
-
-function handleInactiveUser() {
-  var inactive = setTimeout(function(){
-    fauxClick(cW/2, cH/2);
-  }, 2000);
-
-  function clearInactiveTimeout() {
-    clearTimeout(inactive);
-    document.removeEventListener("mousedown", clearInactiveTimeout);
-    document.removeEventListener("touchstart", clearInactiveTimeout);
-  }
-
-  document.addEventListener("mousedown", clearInactiveTimeout);
-  document.addEventListener("touchstart", clearInactiveTimeout);
-}
 
 function startFauxClicking() {
   setTimeout(function(){
