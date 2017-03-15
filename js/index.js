@@ -44,7 +44,7 @@ function handleEvent(e) {
       e.preventDefault();
       e = e.touches[0];
     }
-    if (counter >= 20){
+    if (counter >= 10){
       var currentColor = "#000000";
       var nextColor = "#000000";
       var targetR = calcPageFillRadius(e.pageX, e.pageY);
@@ -94,9 +94,14 @@ function handleEvent(e) {
       duration: 900,
       complete: removeAnimation
     });
-
-    animations.push(fillAnimation, rippleAnimation);
-    counter++;
+    if (counter > 10){
+      var message = document.getElementById("message");
+      message.className = "visible";
+    }
+    else {
+      animations.push(fillAnimation, rippleAnimation);
+      counter++;
+    }
 }
 
 function extend(a, b){
