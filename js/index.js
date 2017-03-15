@@ -2,13 +2,13 @@ var c = document.getElementById("c");
 var ctx = c.getContext("2d");
 var cH;
 var cW;
-var bgColor = "#CFCFC4";
+var bgColor = "#ffffff";
 var animations = [];
 var circles = [];
 var counter = 0;
 
 var colorPicker = (function() {
-  var colors = ["#779ECB", "#F49AC2", "#FFB347", "#77DD77"];
+  var colors = ["#d1dcff", "#ffd1dc", "#dcffd1"];
   var index = 0;
   function next() {
     index = index++ < colors.length-1 ? index : 0;
@@ -45,8 +45,8 @@ function handleEvent(e) {
       e = e.touches[0];
     }
     if (counter >= 10){
-      var currentColor = "#000000";
-      var nextColor = "#000000";
+      var currentColor = "#272727";
+      var nextColor = "#272727";
       var targetR = calcPageFillRadius(e.pageX, e.pageY);
       var rippleSize = Math.min(200, (cW * .4));
       var minCoverDuration = 1400;
