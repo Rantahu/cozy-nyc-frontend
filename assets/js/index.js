@@ -2,13 +2,12 @@ var c = document.getElementById("c");
 var ctx = c.getContext("2d");
 var cH;
 var cW;
-var bgColor = "#ffffff";
+var bgColor = "#272727";
 var animations = [];
 var circles = [];
-var counter = 0;
 
 var colorPicker = (function() {
-  var colors = ["#d1dcff", "#ffd1dc", "#dcffd1"];
+  var colors = ["#8DAAB3", "#FFD8E5","#D67661", "#272727"];
   var index = 0;
   function next() {
     index = index++ < colors.length-1 ? index : 0;
@@ -44,19 +43,13 @@ function handleEvent(e) {
       e.preventDefault();
       e = e.touches[0];
     }
-    if (counter >= 10){
-      var currentColor = "#272727";
-      var nextColor = "#272727";
-      var targetR = calcPageFillRadius(e.pageX, e.pageY);
-      var rippleSize = Math.min(200, (cW * .4));
-      var minCoverDuration = 1400;
-    }else{
-      var currentColor = colorPicker.current();
-      var nextColor = colorPicker.next();
-      var targetR = calcPageFillRadius(e.pageX, e.pageY);
-      var rippleSize = Math.min(200, (cW * .4));
-      var minCoverDuration = 1400;
-    }
+
+    var currentColor = colorPicker.current();
+    var nextColor = colorPicker.next();
+    var targetR = calcPageFillRadius(e.pageX, e.pageY);
+    var rippleSize = Math.min(200, (cW * .4));
+    var minCoverDuration = 1400;
+
 
     var pageFill = new Circle({
       x: e.pageX,
@@ -94,14 +87,9 @@ function handleEvent(e) {
       duration: 900,
       complete: removeAnimation
     });
-    if (counter > 10){
-      var message = document.getElementById("message");
-      message.className = "visible";
-    }
-    else {
-      animations.push(fillAnimation, rippleAnimation);
-      counter++;
-    }
+
+    animations.push(fillAnimation, rippleAnimation);
+
 }
 
 function extend(a, b){
