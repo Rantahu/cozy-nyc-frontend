@@ -90,7 +90,6 @@ textarea{
 		font-size: 12px;
     resize: none;
 		margin-bottom: 10px;
-		display: block;
 }
 
 form{
@@ -99,7 +98,6 @@ form{
 }
 input{
 	margin-bottom: 10px;
-	display: block;
 }
 
 #header {
