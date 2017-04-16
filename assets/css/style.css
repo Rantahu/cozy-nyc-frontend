@@ -90,13 +90,16 @@ textarea{
 		font-size: 12px;
     resize: none;
 		margin-bottom: 10px;
+		display: block;
 }
 
 form{
 	padding-top: 50px;
+	display: block;
 }
 input{
 	margin-bottom: 10px;
+	display: block;
 }
 
 #header {
