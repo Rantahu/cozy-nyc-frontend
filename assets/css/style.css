@@ -50,6 +50,10 @@ h1 {
   font-size: 72px;
 }
 
+h2{
+	font-size: 60px;
+}
+
 a, a:visited {
   color: #F8F5EB;
   line-height: 30px;
@@ -75,6 +79,25 @@ canvas {
   cursor: pointer;
 }
 
+textarea{
+		width: 57%;
+	 	height: 150px;
+    padding: 5px 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+		font-size: 12px;
+    resize: none;
+		margin-bottom: 10px;
+}
+
+form{
+	padding-top: 50px;
+}
+input{
+	margin-bottom: 10px;
+}
 
 #header {
   position:absolute;
