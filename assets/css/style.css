@@ -100,9 +100,7 @@ form{
 }
 input{
 	margin: 10px auto;
-	display: block;
 	width: 57%;
-
 }
 
 
@@ -112,11 +110,6 @@ input{
   text-align: center;
   color: #F8F5EB;
   width: 100%;
-}
-
-#header{
-  position: absolute;
-
 }
 
 @-webkit-keyframes fadeIn {
@@ -144,4 +137,11 @@ input{
   animation-fill-mode: forwards;
   visibility: visible;
   opacity: 0;
+}
+
+.contactform {
+	width: 300px;
+	margin: auto;
+  width: 50%;
+  padding-top: : 20px;
 }
