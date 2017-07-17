@@ -46,7 +46,7 @@ def signup(request):
                 'token': account_activation_token.make_token(user),
             })
             user.email_user(subject, message)
-            return redirect('users:account_activation_sent')
+            return redirect('account_activation_sent')
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})

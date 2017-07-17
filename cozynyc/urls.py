@@ -17,8 +17,11 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import url, include
 
+from core import views as core_views
+
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('cuser.urls', namespace="users")),
+    url(r'^', include('cuser.urls')),
+    url(r'^$', core_views.home, name='home'),
     url(r'^post/', include('post.urls', namespace="post")),
 ]
