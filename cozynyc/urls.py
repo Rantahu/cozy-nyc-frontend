@@ -13,15 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
-from django.contrib import admin
-from django.conf.urls import url, include
 
-from core import views as core_views
+from django.contrib import admin
+from django.conf import settings
+from django.conf.urls import url, include
+from django.conf.urls.static import static
 
 
 urlpatterns = [
-    url(r'^', include('cuser.urls')),
-    url(r'^$', core_views.home, name='home'),
-    url(r'^post/', include('post.urls', namespace="post")),
+    url(r'^', include('cozyuser.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^', include('core.urls')),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

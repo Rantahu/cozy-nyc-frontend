@@ -38,15 +38,14 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'cuser',
-    'post',
+    'cozyuser',
+    'django.contrib.admin',
     'core'
 ]
 
@@ -94,10 +93,16 @@ DATABASES = {
     }
 }
 
+
+AUTH_USER_MODEL = 'auth.User'
+
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 
-AUTH_USER_MODEL = 'cuser.User'
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'cozyuser.authentication.EmailAuthBackend',
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
