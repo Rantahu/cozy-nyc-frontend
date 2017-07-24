@@ -8,6 +8,7 @@ services:
 
   server:
     build: ./server
+    working_dir: /code/server
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - ./server:/code/server
@@ -18,10 +19,9 @@ services:
 
   client:
     image: node:6.3
-    volumes:
-      - .:/code
     ports:
       - "9000:9000"
+    working_dir: /code/server
     volumes:
       - ./client:/code/client
     links:
