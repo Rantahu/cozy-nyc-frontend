@@ -1,0 +1,12 @@
+Django
+django-reversion
+django-filter
+djangorestframework
+gunicorn
+psycopg2
+pytest-cov
+pytest-django
+pytest-mock
+pytz>=2016.1
+django-oauth-toolkit
+pillow
