@@ -3,12 +3,26 @@ version: '2'
 services:
   db:
     image: postgres
-  web:
-    build: .
+    ports:
+      - '5432:5432'
+
+  server:
+    build: ./server
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/code
+      - ./server:/code/server
     ports:
       - "8000:8000"
     depends_on:
       - db
+
+  client:
+    image: node:6.3
+    volumes:
+      - .:/code
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./client:/code/client
+    links:
+      - server

@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'cozyuser',
     'django.contrib.admin',
-    'core'
 ]
 
 MIDDLEWARE = [
