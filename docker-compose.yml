@@ -9,7 +9,7 @@ services:
         volumes:
             - ./pgdata:/var/lib/postgresql/data
 
-    client2:
+    client:
         image: node:6.11.1
         working_dir: /project/client
         command: npm run-script develop
@@ -18,7 +18,7 @@ services:
         volumes:
             - ./client:/project/client
 
-    server2:
+    server:
         build: ./server
         env_file: ./env/dev
         working_dir: /project/server
