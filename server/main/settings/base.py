@@ -112,9 +112,6 @@ DATABASES = {
 }
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(SERVER_DIR, 'assets'),
-]
 
 WEBPACK_DEV_BUNDLE = False
 WEBPACK_DIST_JSON = False

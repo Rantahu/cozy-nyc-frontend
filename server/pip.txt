@@ -10,3 +10,4 @@ pytest-mock
 pytz>=2016.1
 django-oauth-toolkit
 pillow
+django-webpack-loader
