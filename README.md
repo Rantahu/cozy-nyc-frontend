@@ -1,4 +1,4 @@
-## Dockerized Django+React starter project
+# cozy.nyc
 
 ### Requirements
 * [Docker Engine](https://docs.docker.com/engine/installation)
