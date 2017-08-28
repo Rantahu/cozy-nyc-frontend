@@ -21,6 +21,7 @@ webpack-stats*
 staticfiles
 static_cdn
 media_cdn
+media
 
 # Ignore sqlite
 db.sqlite3
@@ -29,3 +30,7 @@ db.sqlite3
 .DS_Store
 
 pgdata
+
+
+#commenting out old requirement shit
+#django-allauth==0.30.0

@@ -5,22 +5,15 @@ volumes:
   postgres_backup: {}
 
 services:
-  postgres:
-    build: ./docker_compose/postgres
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - postgres_backup:/backups
-    env_file: .env
-
-  django:
+  node:
     build:
       context: .
-      dockerfile: ./docker_compose/django/production/Dockerfile
-    user: django
-    depends_on:
-      - postgres
+      dockerfile: ./docker_compose/node/development/Dockerfile
     command: /start.sh
-    env_file: .env
+    volumes:
+      - ./frontend:/exchange/frontend
+    ports:
+      - "3000:3000"
 
   nginx:
     build: ./docker_compose/nginx
