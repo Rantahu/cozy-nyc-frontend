@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-development": "webpack --config webpack/webpack.local.config.js --progress --colors",
+    "start": "node ./bin/www",
+    "build": "webpack --config webpack/webpack.production.config.js --progress --colors",
     "watch": "webpack-dev-server --config webpack/webpack.local.config.js",
     "test": "./node_modules/karma/bin/karma start webpack/karma.config.js --log-level debug"
   },
@@ -19,6 +20,13 @@
   },
   "homepage": "https://github.com/cozy-nyc/django-react-seed#readme",
   "devDependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2",
     "axios": "^0.16.2",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
