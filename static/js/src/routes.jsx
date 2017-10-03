@@ -14,29 +14,29 @@ import Login from './components/auth/login';
 import Sell from './containers/sell';
 import Contact from './containers/contact'
 
-export default (
-   <Route path="/" component={App}>
-       <IndexRoute component={Home} />
+export default(
+  <Route path="/" component={App}>
+    <IndexRoute component={Home}/>
 
-       // Static Pages
-       <Route path="about" component={About} />
+    // Static Pages
+    <Route path="about" component={About}/>
 
-       // Shop Pages
-       <Route path="s/:itemid/:slug/" component={Item}/>
-       <Route path="s/:itemid/:slug/:listingid" component={Listing}/>
-       <Route path="sell" component={Sell}/>
+    // Shop Pages
+    <Route path="s/:itemid/:slug/" component={Item}/>
+    <Route path="s/:itemid/:slug/:listingid" component={Listing}/>
+    <Route path="sell" component={Sell}/>
 
-       // Auth Pages
-       <Route path="login" component={Login}/>
-       <Route path="register" component={Register}/>
+    // Auth Pages
+    <Route path="login" component={Login}/>
+    <Route path="register" component={Register}/>
 
-       //User Pages
-       <Route path="dashboard" component={RequireAuth(Dashboard)}/>
+    //User Pages
+    <Route path="dashboard" component={RequireAuth(Dashboard)}/>
 
-       //Support Pages
-      <Route path="contact" component={Contact}/>
+    //Support Pages
+    <Route path="contact" component={Contact}/>
 
-       //   Error pages
-       <Route path='*'component={Error404} />
-    </Route>
- );
+    // Error pages
+    <Route path='*' component={Error404}/>
+  </Route>
+);

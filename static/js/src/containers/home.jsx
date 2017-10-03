@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <div>
       <canvas id="c"></canvas>
-
       <header>
         <h1>cozy.</h1>
         <section id="message" className="visible">
@@ -28,7 +27,6 @@ const Home = () => {
           </ul>
         </section>
       </header>
-
     </div>
   );
 };

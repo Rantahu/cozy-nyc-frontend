@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Navbar from '../components/navbar'
 import '../scss/main.css'
 
@@ -7,9 +7,9 @@ class App extends Component {
     return (
       <div>
 
-      <div className="container">
-        {this.props.children}
-      </div>
+        <div className="container">
+          {this.props.children}
+        </div>
 
       </div>
     );
