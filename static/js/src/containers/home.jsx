@@ -9,16 +9,26 @@ const Home = () => {
     <div>
       <canvas id="c"></canvas>
 
-      <div id="header">
+      <header>
         <h1>cozy.</h1>
-
         <section id="message" className="visible">
+          <a href="store">store</a>
+          <a href="about">about</a>
           <a href="contact">contact</a>
-          <a href="https://www.facebook.com/cozy.nyc">facebook</a>
-          <a href="https://twitter.com/cozy_nyc">twitter</a>
-          <a href="https://www.instagram.com/cozy.nyc/">instagram</a>
+          <ul id="externallinks">
+            <li>
+              <a href="https://www.facebook.com/cozy.nyc">f</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/cozy_nyc">t</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/cozy.nyc/">i</a>
+            </li>
+          </ul>
         </section>
-      </div>
+      </header>
+
     </div>
   );
 };

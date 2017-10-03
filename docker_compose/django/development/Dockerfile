@@ -16,7 +16,7 @@ COPY package.json /app/
 WORKDIR /app
 COPY . /app
 
-RUN pip install -r /requirements/local.txt && npm install && npm run build-development
+RUN pip install -r /requirements/local.txt && npm install && npm run start
 
 COPY ./docker_compose/django/development/start.sh /start.sh
 COPY ./docker_compose/django/entrypoint.sh /entrypoint.sh
