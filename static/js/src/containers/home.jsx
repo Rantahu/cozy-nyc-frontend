@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Link} from 'react-router';
 import {Provider} from 'react-redux';
 
 import ListingQuery from '../components/listingquery';
@@ -11,9 +12,9 @@ const Home = () => {
       <header>
         <h1>cozy.</h1>
         <section id="message" className="visible">
-          <a href="store">store</a>
-          <a href="about">about</a>
-          <a href="contact">contact</a>
+          <Link to={'store'}>store</Link>
+          <Link to={'about'}>about</Link>
+          <Link to={'contact'}>contact</Link>
           <ul id="externallinks">
             <li>
               <a href="https://www.facebook.com/cozy.nyc">f</a>

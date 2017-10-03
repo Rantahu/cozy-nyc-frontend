@@ -6,6 +6,7 @@ let API_HOST = 'localhost:8000';
 module.exports = {
     devServer: {
         inline: true,
+        historyApiFallback: true,
         contentBase: path.join(__dirname, '../static/js/dist'),
         host: '0.0.0.0',
         port: 3000

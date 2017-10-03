@@ -7,7 +7,7 @@ const Contact = () => {
     <div>
       <header>
         <h2>contact us.</h2>
-        <form class="contactform" action="https://formspree.io/hello@cozy.nyc" method="POST">
+        <form className="contactform" action="https://formspree.io/hello@cozy.nyc" method="POST">
           <input type="text" name="name" placeholder="your name." required/>
           <input type="email" name="_replyto" placeholder="your email." required/>
           <textarea name="message" placeholder="message us." required></textarea>
