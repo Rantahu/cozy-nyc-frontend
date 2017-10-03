@@ -12,10 +12,12 @@ import RequireAuth from './components/auth/require-auth'
 import Register from './components/auth/register';
 import Login from './components/auth/login';
 import Sell from './containers/sell';
+import Contact from './containers/contact'
 
 export default (
    <Route path="/" component={App}>
        <IndexRoute component={Home} />
+
        // Static Pages
        <Route path="about" component={About} />
 
@@ -30,6 +32,9 @@ export default (
 
        //User Pages
        <Route path="dashboard" component={RequireAuth(Dashboard)}/>
+
+       //Support Pages
+      <Route path="contact" component={Contact}/>
 
        //   Error pages
        <Route path='*'component={Error404} />

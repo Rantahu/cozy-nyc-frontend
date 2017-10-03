@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^about/$', TemplateView.as_view(template_name="index.html")),
     url(r'^dashboard/$', TemplateView.as_view(template_name="index.html")),
     url(r'^sell/$', TemplateView.as_view(template_name="index.html")),
+    url(r'^contact/$', TemplateView.as_view(template_name="index.html")),
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     url(r'^api-token-auth/', obtain_jwt_token),
