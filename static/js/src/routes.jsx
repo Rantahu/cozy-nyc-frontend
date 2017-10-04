@@ -12,7 +12,8 @@ import RequireAuth from './components/auth/require-auth'
 import Register from './components/auth/register';
 import Login from './components/auth/login';
 import Sell from './containers/sell';
-import Contact from './containers/contact'
+import Contact from './containers/contact';
+import Store from './containers/store';
 
 export default(
   <Route path="/" component={App}>
@@ -22,6 +23,7 @@ export default(
     <Route path="about" component={About}/>
 
     // Shop Pages
+    <Route path="store" component={Store} />
     <Route path="s/:itemid/:slug/" component={Item}/>
     <Route path="s/:itemid/:slug/:listingid" component={Listing}/>
     <Route path="sell" component={Sell}/>
