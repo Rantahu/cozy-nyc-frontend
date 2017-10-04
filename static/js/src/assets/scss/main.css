@@ -149,9 +149,9 @@ ul#externallinks li {
 }
 
 #message.visible {
-  -webkit-animation: fadeIn 4s ease-in;
+  -webkit-animation: fadeIn 2s ease-in;
   -webkit-animation-fill-mode: forwards;
-  animation: fadeIn 4s ease-in;
+  animation: fadeIn 2s ease-in;
   animation-fill-mode: forwards;
   visibility: visible;
   opacity: 0;
