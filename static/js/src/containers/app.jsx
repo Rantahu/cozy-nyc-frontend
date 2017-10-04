@@ -6,10 +6,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="container">
+      <canvas id="c"></canvas>
+        <div id="container">
           {this.props.children}
         </div>
-
       </div>
     );
   }

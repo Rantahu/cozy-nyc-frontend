@@ -6,9 +6,9 @@ import ListingQuery from '../components/listingquery';
 
 const Store = () => {
    return (
-      <div>
+      <header>
          <ListingQuery />
-      </div>
+      </header>
    );
 };
 

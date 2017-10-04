@@ -1,46 +1,39 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: dois;
-	vertical-align: baseline;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: dois;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
 }
+
 body {
-	line-height: 1;
-	background-color: #272727;
+  line-height: 1;
+  background-color: #272727;
 }
+
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 * {
@@ -51,8 +44,8 @@ h1 {
   font-size: 72px;
 }
 
-h2{
-	font-size: 60px;
+h2 {
+  font-size: 60px;
 }
 
 a, a:visited {
@@ -62,73 +55,92 @@ a, a:visited {
   text-decoration: none;
 }
 
-
 body {
-  -webkit-user-select: none; /* Chrome/Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
-
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
   /* Rules below not implemented in browsers yet */
   -o-user-select: none;
   user-select: none;
 }
 
 canvas {
+  position: fixed;
   display: block;
   width: 100%;
   height: 100%;
-  cursor: pointer;
+  overflow: hidden;
+  float: left;
+  z-index: -100;
 }
 
-textarea{
-	 	height: 150px;
-    padding: 5px 5px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-		font-size: 12px;
-    resize: none;
-		display: block;
-		margin: 10px auto;
+textarea {
+  height: 150px;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 12px;
+  resize: none;
+  display: block;
+  margin: 10px auto;
 }
 
-form{
-	padding-top: 50px;
-
-}
-input{
-	margin: 10px auto;
-	width: 57%;
+form {
+  padding-top: 50px;
 }
 
+input {
+  margin: 10px auto;
+  width: 57%;
+}
 
-header {
-  position:absolute;
+#container {
+  position: absolute;
   top: 20%;
   text-align: center;
   color: #F8F5EB;
   width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+  border: 0;
+  font-size: 100%;
+  font: dois;
+  vertical-align: baseline;
+  display: block;
 }
 
 @-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+
 @keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 ul#externallinks li {
-		display: inline-block;
-		padding: 10px;
+  display: inline-block;
+  padding: 10px;
 }
 
 #message {
   padding-top: 50px;
-	margin: auto;
-	width: 300px;
+  margin: auto;
+  width: 300px;
 }
 
 #message.hidden {
@@ -146,7 +158,7 @@ ul#externallinks li {
 }
 
 .contactform {
-	width: 300px;
-	margin: auto;
+  width: 300px;
+  margin: auto;
   padding-top: 20px;
 }
