@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
 import {Provider} from 'react-redux';
 
-import ListingQuery from '../components/listingquery';
-
 const Home = () => {
   return (
     <div>

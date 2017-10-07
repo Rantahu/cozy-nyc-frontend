@@ -6,7 +6,6 @@ import Dashboard from "./containers/dashboard";
 import Home from "./containers/home"
 import About from "./containers/about";
 import Item from "./containers/itemdetail";
-import Listing from "./containers/listingdetail";
 import Error404 from './components/404-error'
 import RequireAuth from './components/auth/require-auth'
 import Register from './components/auth/register';
@@ -24,8 +23,7 @@ export default(
 
     // Shop Pages
     <Route path="store" component={Store} />
-    <Route path="s/:itemid/:slug/" component={Item}/>
-    <Route path="s/:itemid/:slug/:listingid" component={Listing}/>
+    <Route path="s/:itemid/jawns" component={Item}/>
     <Route path="sell" component={Sell}/>
 
     // Auth Pages

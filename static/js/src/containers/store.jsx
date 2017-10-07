@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import ListingQuery from '../components/listingquery';
+import ItemQuery from '../components/itemquery';
 
 const Store = () => {
    return (
       <header>
-         <ListingQuery />
+         <ItemQuery />
       </header>
    );
 };

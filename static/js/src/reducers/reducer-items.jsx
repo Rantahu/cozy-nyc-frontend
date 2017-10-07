@@ -1,5 +1,9 @@
 export default function Reducer(
    state={
+      activeitem: {
+        id: -1,
+        slug: "n"
+      },
       fetching: false,
       fetched: false,
       items: [],
