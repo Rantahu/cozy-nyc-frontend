@@ -4,18 +4,16 @@ import {Provider} from 'react-redux';
 import {getItem} from '../actions/items/get';
 import {connect} from 'react-redux';
 
+import Navbar from '../components/navbar';
+
 @connect((store) => {
    return {
-      items: store.items.items,
-      itemsFetched: store.items.fetched,
+      item: store.items.activeitem
    };
 })
 class Item extends Component {
-  componentDidMount() {
-    const {dispatch, params: {
-        itemid
-      }} = this.props;
-    dispatch(getItem(itemid));
+  componentWillMount() {
+     this.props.dispatch(getItem(this.props.params.itemid))
   }
 
   render() {
@@ -24,11 +22,18 @@ class Item extends Component {
       return null;
     return (
       <div>
-        <h3>{item.item_name}</h3>
-        <h3>${item.price}
-          Size {item.size}</h3>
+      <header>
+        <Navbar />
+      </header>
+
+
+        <img src={item.image} />
+        <h3>{item.name}</h3>
+        <h3>${item.price}</h3>
+        <h3>Designer</h3>
         <h3>{item.location}</h3>
         <h3>{item.description}</h3>
+        <h3>{item.materal}</h3>
         <button>Buy Now</button>
       </div>
     );

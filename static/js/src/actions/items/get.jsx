@@ -26,10 +26,10 @@ export function getItem(value) {
   return function(dispatch) {
         api.get('/item/'+value)
            .then((response) => {
-              dispatch({type: "FETCH_ITEMS_FULFILLED", payload: response.data})
+              dispatch({type: "FETCH_ITEM_FULFILLED", payload: response.data})
            })
            .catch((err) => {
-              dispatch({type: "FETCH_ITEMS_ERROR", payload: err})
+              dispatch({type: "FETCH_ITEM_ERROR", payload: err})
            })
     }
 }

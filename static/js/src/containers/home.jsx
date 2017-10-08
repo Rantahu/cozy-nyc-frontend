@@ -8,7 +8,7 @@ const Home = () => {
     <div>
         <h1>cozy.</h1>
         <section id="message" className="visible">
-          <Link to={'store'}>store</Link>
+          <Link to={'s'}>store</Link>
           <Link to={'about'}>about</Link>
           <Link to={'contact'}>contact</Link>
           <ul id="externallinks">

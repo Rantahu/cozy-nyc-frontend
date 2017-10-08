@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import Navbar from '../components/navbar';
+
 const Contact = () => {
   return (
     <div>
       <header>
+        <Navbar />
+      </header>
+      <div  id="content">
         <h2>contact us.</h2>
         <form className="contactform" action="https://formspree.io/hello@cozy.nyc" method="POST">
           <input type="text" name="name" placeholder="your name." required/>
@@ -16,7 +21,7 @@ const Contact = () => {
           <input type="hidden" name="_subject" value="cozy.nyc"/>
           <input type="submit" value="Send"/>
         </form>
-      </header>
+      </div>
     </div>
   );
 };

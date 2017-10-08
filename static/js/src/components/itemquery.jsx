@@ -23,6 +23,7 @@ export default class ItemQuery extends React.Component {
 
       const mappedItems = items.map(item => <li key={ item.id }><ItemBox
          id={ item.id }
+         image={ item.image }
          name={ item.name }
          price={ item.price }
          /></li>)

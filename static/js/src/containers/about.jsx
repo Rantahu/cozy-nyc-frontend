@@ -2,13 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import Navbar from '../components/navbar';
+
 const About = () => {
   return (
   <div>
-      <header>
-    <img id="headerMedia" className="headerimg" src="/munchies.gif" />
+    <header>
+      <Navbar />
     </header>
     <div id="content">
+    <img id="headerMedia" className="headerimg" src="/munchies.gif" />
     <section id="message">
       <p>Laborum excepteur commodo proident nulla minim quis proident laboris commodo fugiat eiusmod. In adipisicing ad consequat adipisicing tempor non sit pariatur occaecat ex officia aliqua aliqua nisi consequat cupidatat cupidatat. Enim Lorem fugiat ea anim reprehenderit excepteur aute ut et nisi magna et tempor occaecat dolor ea laborum. Eiusmod magna aliqua id esse minim laborum aute ex eiusmod ad exercitation elit ut. Et laboris tempor aute ut sint do sit culpa sunt nisi proident pariatur id cupidatat laborum.</p>
       <br />

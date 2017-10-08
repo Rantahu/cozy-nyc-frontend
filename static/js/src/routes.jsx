@@ -13,6 +13,7 @@ import Login from './components/auth/login';
 import Sell from './containers/sell';
 import Contact from './containers/contact';
 import Store from './containers/store';
+import Checkout from './containers/checkout';
 
 export default(
   <Route path="/" component={App}>
@@ -22,9 +23,10 @@ export default(
     <Route path="about" component={About}/>
 
     // Shop Pages
-    <Route path="store" component={Store} />
-    <Route path="s/:itemid/jawns" component={Item}/>
-    <Route path="sell" component={Sell}/>
+    <Route path="s" component={Store} />
+    <Route path="s/sell" component={Sell}/>
+    <Route path="s/checkout" component={Checkout}/>
+    <Route path="s/:itemid" component={Item}/>
 
     // Auth Pages
     <Route path="login" component={Login}/>
