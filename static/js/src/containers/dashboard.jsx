@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import * as actions from '../actions/auth/actions';
 
 class Dashboard extends Component {
@@ -11,7 +11,7 @@ class Dashboard extends Component {
   }
 
   renderContent() {
-    if(this.props.content) {
+    if (this.props.content) {
       return (
         <p>{this.props.content}</p>
       );
@@ -28,7 +28,7 @@ class Dashboard extends Component {
 }
 
 function mapStateToProps(state) {
-  return { content: state.auth.content };
+  return {content: state.auth.content};
 }
 
 export default connect(mapStateToProps, actions)(Dashboard);

@@ -1,5 +1,11 @@
 export default function Reducer(
    state={
+      activeitem: {
+        fetching: false,
+        fetched: false,
+        id: -1,
+        slug: "n"
+      },
       fetching: false,
       fetched: false,
       items: [],
@@ -20,6 +26,24 @@ export default function Reducer(
             fecthing: false,
             fetched: true,
             items: action.payload,
+            }
+         break;
+      }
+
+      case "FETCH_ITEM_PENDING": {
+         return {...state, fetching: true}
+         break;
+      }
+      case "FETCH_ITEM_REJECTED":{
+         return {...state, fecthing: false, error: action.payload}
+         break;
+      }
+      case "FETCH_ITEM_FULFILLED": {
+         return {
+            ...state,
+            fecthing: false,
+            fetched: true,
+            activeitem: action.payload,
             }
          break;
       }

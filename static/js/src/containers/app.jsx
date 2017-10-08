@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Navbar from '../components/navbar'
-import '../scss/main.css'
+import '../assets/scss/main.css'
 
 class App extends Component {
   render() {
     return (
       <div>
-
-      <div className="container">
-        {this.props.children}
-      </div>
-
+      <canvas id="c"></canvas>
+        <div id="container">
+          {this.props.children}
+        </div>
       </div>
     );
   }
