@@ -14,6 +14,7 @@ import Sell from './containers/sell';
 import Contact from './containers/contact';
 import Store from './containers/store';
 import Checkout from './containers/checkout';
+import Brand from './containers/brand';
 
 export default(
   <Route path="/" component={App}>
@@ -27,6 +28,7 @@ export default(
     <Route path="s/sell" component={Sell}/>
     <Route path="s/checkout" component={Checkout}/>
     <Route path="s/:itemid" component={Item}/>
+    <Route path="p/:brandslug" component={Brand}/>
 
     // Auth Pages
     <Route path="login" component={Login}/>

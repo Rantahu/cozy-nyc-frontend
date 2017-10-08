@@ -16,14 +16,14 @@ class Navbar extends Component {
       <div id="navbar" className="dropdown">
          <button className="dropdown-btn"><IndexLink to="/">[cube]</IndexLink></button>
          <ul className="dropdown-content">
-           <li><Link to={'/s'}>Store</Link></li>
-           <li><Link to={'/about'}>About</Link></li>
-           <li><Link to={'/contact'}>Contact</Link></li>
+           <li><Link to={'/s'}>store</Link></li>
+           <li><Link to={'/about'}>about</Link></li>
+           <li><Link to={'/contact'}>contact</Link></li>
          </ul>
          <span>
-         <Link to={`/s/sell`}>Sell</Link>|
-            { !isAuth && <Link to={`/login`}>Login</Link> }
-            { isAuth && <Link to={`/dashboard`}>Account</Link> }
+         <Link to={`/s/sell`}>sell</Link>
+            { !isAuth && <Link to={`/login`}>login</Link> }
+            { isAuth && <Link to={`/dashboard`}>account</Link> }
          </span>
       </div>
       )
