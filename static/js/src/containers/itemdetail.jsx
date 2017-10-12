@@ -34,6 +34,7 @@ class Item extends Component {
         <h3>{item.location}</h3>
         <h3>{item.description}</h3>
         <h3>{item.materal}</h3>
+        <button>Add to Cart</button>
         <button>Buy Now</button>
       </div>
     );

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Navbar from '../components/navbar'
-import '../assets/scss/main.css'
+import '../assets/scss/main.scss'
 
 class App extends Component {
   render() {

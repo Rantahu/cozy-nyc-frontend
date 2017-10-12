@@ -3,8 +3,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: dois;
-  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -33,7 +31,8 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing: 0;  { !isAuth && <Link to={`/login`}>login</Link> }
+            { isAuth && <Link to={`/dashboard`}>account</Link> }
 }
 
 * {
@@ -65,6 +64,67 @@ body {
   /* Rules below not implemented in browsers yet */
   -o-user-select: none;
   user-select: none;
+}
+
+// Navbar
+#navbar {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#navbar span {
+  display: inline-block;
+}
+
+#navbar-auth {
+  float: right;
+}
+
+/*Dropdown menu css*/
+.dropdown-btn {
+	text-align: left;
+	background-color: rgba(0,0,0,0.0);
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+  position: absolute;
+  background-color: #F8F8F8;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+	color: #272727;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+	color: #FFD8E5;
+}
+
+.dropdown:hover .dropdown-content {
+	display: inline-block;
+}
+
+.dropdown:hover .dropdown-btn {
+  background-color: #F8F8F8;
+}
+
+.dropdown:hover .dropdown-btn a {
+	color: #272727;
 }
 
 canvas {
@@ -100,16 +160,13 @@ input {
 }
 
 #container {
-  position: absolute;
-  text-align: center;
   color: #F8F5EB;
   width: 100%;
   margin: 0;
   padding-bottom: 50px;
   border: 0;
   font-size: 100%;
-  font: dois;
-  vertical-align: baseline;
+  font: Dosis;
   display: block;
 }
 
@@ -160,52 +217,4 @@ ul#externallinks li {
   width: 300px;
   margin: auto;
   padding-top: 20px;
-}
-
-/*Dropdown menu css*/
-.dropdown-btn {
-	text-align: left;
-	background-color: rgba(0,0,0,0.0);
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  min-width: 160px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-	display: none;
-  position: absolute;
-  background-color: #F8F8F8;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-	color: #272727;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-	color: #FFD8E5;
-}
-
-.dropdown:hover .dropdown-content {
-	display: inline-block;
-}
-
-.dropdown:hover .dropdown-btn {
-  background-color: #F8F8F8;
-}
-
-.dropdown:hover .dropdown-btn a {
-	color: #272727;
 }
