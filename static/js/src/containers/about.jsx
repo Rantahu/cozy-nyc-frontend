@@ -10,7 +10,7 @@ const About = () => {
     <header>
       <Navbar />
     </header>
-    <div id="content">
+    <div id="content" className="visible">
     <img id="headerMedia" className="headerimg" src="/munchies.gif" />
     <section className="message">
       <p>Laborum excepteur commodo proident nulla minim quis proident laboris
