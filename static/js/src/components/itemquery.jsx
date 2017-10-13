@@ -21,18 +21,20 @@ export default class ItemQuery extends React.Component {
 
       const { items } = this.props;
 
-      const mappedItems = items.map(item => <li key={ item.id }><ItemBox
-         id={ item.id }
-         image={ item.image }
-         name={ item.name }
-         price={ item.price }
-         /></li>)
+      const mappedItems = items.map(item =>
+        <div className="four columns"
+         key={ item.id }>
+         <ItemBox
+           id={ item.id }
+           image={ item.image }
+           name={ item.name }
+           price={ item.price }
+         /></div>)
 
       return (
-         <ul>
+        <div className="row">
             {mappedItems}
-         </ul>
-
+        </div>
       );
    }
 }
