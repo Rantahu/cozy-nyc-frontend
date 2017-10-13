@@ -1,38 +1,30 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-}
-
 /* HTML5 display-role reset for older browsers */
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-
 body {
   line-height: 1;
   background-color: #272727;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
   content: '';
   content: none;
 }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;  { !isAuth && <Link to={`/login`}>login</Link> }
-            { isAuth && <Link to={`/dashboard`}>account</Link> }
+  border-spacing: 0;
 }
 
 * {
@@ -47,7 +39,8 @@ h2 {
   font-size: 60px;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: #F8F5EB;
   line-height: 30px;
   display: block;
@@ -65,7 +58,6 @@ body {
   -o-user-select: none;
   user-select: none;
 }
-
 // Navbar
 #navbar {
   padding-left: 40px;
@@ -79,11 +71,10 @@ body {
 #navbar-auth {
   float: right;
 }
-
 /*Dropdown menu css*/
 .dropdown-btn {
-	text-align: left;
-	background-color: rgba(0,0,0,0.0);
+  text-align: left;
+  background-color: rgba(0,0,0,0.0);
   padding: 10px;
   font-size: 16px;
   border: none;
@@ -96,27 +87,27 @@ body {
 }
 
 .dropdown-content {
-	display: none;
+  display: none;
   position: absolute;
   background-color: #F8F8F8;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-	color: #272727;
+  color: #272727;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover {
-	color: #FFD8E5;
+  color: #FFD8E5;
 }
 
 .dropdown:hover .dropdown-content {
-	display: inline-block;
+  display: inline-block;
 }
 
 .dropdown:hover .dropdown-btn {
@@ -124,7 +115,7 @@ body {
 }
 
 .dropdown:hover .dropdown-btn a {
-	color: #272727;
+  color: #272727;
 }
 
 canvas {
@@ -139,7 +130,7 @@ canvas {
 
 textarea {
   height: 150px;
-  padding: 5px 5px;
+  padding: 5px;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -159,52 +150,51 @@ input {
   width: 57%;
 }
 
-#container {
+.container {
   color: #F8F5EB;
-  width: 100%;
-  margin: 0;
-  padding-bottom: 50px;
-  border: 0;
-  font-size: 100%;
   font: Dosis;
-  display: block;
 }
 
+#content {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  border: 0;
+}
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
-ul#externallinks li {
+.externallinks li {
   display: inline-block;
   padding: 10px;
 }
 
-#message {
-  padding-top: 50px;
-  margin: auto;
-  width: 300px;
+.message {
+  text-align: center;
 }
 
-#message.hidden {
+.message.hidden {
   visibility: hidden;
   opacity: 0;
 }
 
-#message.visible {
+.message.visible {
   -webkit-animation: fadeIn 2s ease-in;
   -webkit-animation-fill-mode: forwards;
   animation: fadeIn 2s ease-in;
@@ -217,4 +207,12 @@ ul#externallinks li {
   width: 300px;
   margin: auto;
   padding-top: 20px;
+}
+
+.item-block {
+  height: 30vw;
+}
+
+.center {
+  text-align: center;
 }

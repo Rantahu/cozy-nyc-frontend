@@ -8,7 +8,7 @@ const ItemBox= (props) => {
 
    return (
       <Link to={{ pathname: url }} activeClassName="active">
-         <div>
+         <div className="item-block">
             <img src={ props.image } />
             <h3>{ props.name }</h3>
             <h3>Designer</h3>

@@ -25,8 +25,7 @@ class Item extends Component {
       <header>
         <Navbar />
       </header>
-
-
+      <div id="content">
         <img src={item.image} />
         <h3>{item.name}</h3>
         <h3>${item.price}</h3>
@@ -36,6 +35,7 @@ class Item extends Component {
         <h3>{item.materal}</h3>
         <button>Add to Cart</button>
         <button>Buy Now</button>
+        </div>
       </div>
     );
   }

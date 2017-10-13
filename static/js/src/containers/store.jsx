@@ -12,8 +12,10 @@ const Store = () => {
       <header>
         <Navbar />
       </header>
-      <ItemQuery />
+      <div>
+        <ItemQuery />
       </div>
+    </div>
    );
 };
 
