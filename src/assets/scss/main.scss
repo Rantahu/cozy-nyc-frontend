@@ -89,7 +89,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #F8F8F8;
+  background-color: #F8F5EB;
   min-width: 160px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   z-index: 1;
@@ -111,7 +111,7 @@ body {
 }
 
 .dropdown:hover .dropdown-btn {
-  background-color: #F8F8F8;
+  background-color: #F8F5EB;
 }
 
 .dropdown:hover .dropdown-btn a {
@@ -134,7 +134,7 @@ textarea {
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
-  background-color: #f8f8f8;
+  background-color: #F8F5EB;
   font-size: 12px;
   resize: none;
   display: block;

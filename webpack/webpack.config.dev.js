@@ -7,12 +7,12 @@ module.exports = {
     devServer: {
         inline: true,
         historyApiFallback: true,
-        contentBase: path.join(__dirname, '../static/js/dist'),
+        contentBase: path.join(__dirname, '../dist'),
         host: '0.0.0.0',
         port: 3000
     },
     devtool: 'cheap-module-eval-source-map',
-    entry: './static/js/src/index.jsx',
+    entry: './src/index.jsx',
     output: { path: __dirname, filename: 'bundle.js' },
     module: {
         loaders: [
@@ -33,7 +33,7 @@ module.exports = {
         ]
     },
     output: {
-        path: path.join(__dirname, '../static/js/dist'),
+        path: path.join(__dirname, '../dist'),
         filename: 'js/bundle.min.js',
         chunkFilename: '[name].js'
     },
