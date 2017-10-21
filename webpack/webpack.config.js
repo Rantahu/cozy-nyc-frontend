@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === 'production') API_HOST = 'vataxia.net';
 
 module.exports = {
     devtool: 'cheap-module-eval-source-map',
-    entry: '../static/src/index',
+    entry: './src/index',
     module: {
         loaders: [
             {
