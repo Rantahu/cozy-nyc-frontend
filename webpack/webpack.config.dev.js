@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
-let API_HOST = 'localhost:8000';
+let API_HOST = 'dev.cozy.exchange';
 
 module.exports = {
     devServer: {
