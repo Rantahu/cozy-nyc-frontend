@@ -4,8 +4,6 @@ import {Provider} from 'react-redux';
 import {getItem} from '../actions/items/get';
 import {connect} from 'react-redux';
 
-import Navbar from '../components/navbar';
-
 @connect((state) => {
   return {item: state.items.activeitem};
 })
@@ -18,13 +16,10 @@ class Item extends Component {
 
     const {item} = this.props;
 
-    if (!item) 
+    if (!item)
       return null;
     return (
       <div>
-        <header>
-          <Navbar/>
-        </header>
         <div id="content" className="visible">
           <img src={item.image}/>
           <h3>{item.name}</h3>

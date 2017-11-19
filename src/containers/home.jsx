@@ -15,9 +15,7 @@ class Home extends Component {
     return (
       <div>
           <h1 className="center">cozy.</h1>
-          <section className="message visible">
-          { !isAuth && <Link to={`/login`}>login</Link> }
-          { isAuth && <Link to={`/dashboard`}>@Account</Link> }
+          <section id='home-links' className="message visible">
             <Link to={'s'}>store</Link>
             <Link to={'about'}>about</Link>
             <Link to={'contact'}>contact</Link>

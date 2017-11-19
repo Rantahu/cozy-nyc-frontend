@@ -2,14 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import Navbar from '../components/navbar';
 
 const Contact = () => {
   return (
     <div>
-      <header>
-        <Navbar />
-      </header>
       <div id="content" className="visible">
         <h2>contact us.</h2>
         <form className="contactform" action="https://formspree.io/hello@cozy.nyc" method="POST">

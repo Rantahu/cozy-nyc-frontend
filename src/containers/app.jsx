@@ -8,7 +8,10 @@ class App extends Component {
   render() {
     return (
       <div>
-      <canvas id="c"></canvas>
+        <canvas id="c"></canvas>
+        <header>
+          <Navbar/>
+        </header>
         <div className="container">
           {this.props.children}
         </div>

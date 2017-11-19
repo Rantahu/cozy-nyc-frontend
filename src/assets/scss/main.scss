@@ -68,13 +68,10 @@ body {
   display: inline-block;
 }
 
-#navbar-auth {
-  float: right;
-}
+
 /*Dropdown menu css*/
 .dropdown-btn {
   text-align: left;
-  background-color: rgba(0,0,0,0.0);
   padding: 10px;
   font-size: 16px;
   border: none;
@@ -111,7 +108,7 @@ body {
 }
 
 .dropdown:hover .dropdown-btn {
-  background-color: #F8F5EB;
+  fill: #272727;
 }
 
 .dropdown:hover .dropdown-btn a {
@@ -215,4 +212,8 @@ input {
 
 .center {
   text-align: center;
+}
+
+#brand-img {
+  width: 50px;
 }
