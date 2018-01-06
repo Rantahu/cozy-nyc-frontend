@@ -1,7 +1,5 @@
 # cozy.nyc
-
-### Requirements
-
+![Home](docs/homepage.png)
 
 ### Stack
 * Webpack + React
