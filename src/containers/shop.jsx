@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import ItemQuery from '../components/itemquery';
 
 
-const Store = () => {
+const Shop = () => {
    return (
      <div>
       <div>
@@ -15,4 +15,4 @@ const Store = () => {
    );
 };
 
-export default Store;
+export default Shop;

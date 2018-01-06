@@ -1,36 +1,36 @@
 import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
-import {Provider} from 'react-redux';
-import { connect } from 'react-redux';
+import { Provider, connect } from 'react-redux';
 
 
-@connect((state) => ({
-   isAuth: state.auth.authenticated
-}))
 class Home extends Component {
   render(){
     const { isAuth } = this.props;
 
     return (
       <div>
-          <h1 className="center">cozy.</h1>
-          <section id='home-links' className="message visible">
-            <Link to={'s'}>store</Link>
+        <canvas id="c"></canvas>
+
+        <div id='home-sidebar'>
+
+          <div>
+            <Link to={'radio'}>radio</Link>
+            <Link to={'discovery'}>discovery</Link>
+            <Link to={'boards'}>boards</Link>
+          </div>
+
+          <div>
+            <Link to={'shop'}>shop</Link>
             <Link to={'about'}>about</Link>
             <Link to={'contact'}>contact</Link>
-            <ul className="externallinks">
-              <li>
-                <a href="https://www.facebook.com/cozy.nyc">f</a>
-              </li>
-              <li>
-                <a href="https://twitter.com/cozy_nyc">t</a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/cozy.nyc/">i</a>
-              </li>
-            </ul>
-          </section>
+          </div>
+        </div>
+
+        <div id="home-main">
+          <h1 id="brand-tag">cozy.</h1>
+        </div>
+
       </div>
     )
   }

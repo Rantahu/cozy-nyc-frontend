@@ -1,7 +1,7 @@
 {
-  "name": "cozy-exchange",
-  "version": "0.1.0",
-  "description": "",
+  "name": "cozy-nyc",
+  "version": "1.0.0",
+  "description": "A site for weebs...",
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --progress --verbose",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cozy-nyc/django-react-seed.git"
+    "url": "git+https://github.com/cozy-nyc/cozt-nyc.git"
   },
-  "author": "",
+  "author": "cozy.",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cozy-nyc/django-react-seed/issues"
+    "url": "https://github.com/cozy-nyc/cozy-nyc/issues"
   },
-  "homepage": "https://github.com/cozy-nyc/django-react-seed#readme",
+  "homepage": "https://github.com/cozy-nyc/cozy-nyc#readme",
   "devDependencies": {
     "axios": "^0.16.2",
     "babel-cli": "^6.24.1",

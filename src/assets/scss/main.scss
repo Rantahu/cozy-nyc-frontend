@@ -58,6 +58,30 @@ body {
   -o-user-select: none;
   user-select: none;
 }
+
+/* Containers */
+
+// Home Page
+#home-main {
+  float: right;
+}
+
+#home-sidebar {
+  float: left;
+}
+
+// Radio Home Page
+#radio-feature {
+  float: right;
+}
+
+#radoi-sidebar {
+  float: left;
+}
+
+
+
+
 // Navbar
 #navbar {
   padding-left: 40px;
