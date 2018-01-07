@@ -6,9 +6,11 @@ import authReducer from './reducer-auth';
 import usersReducer from './reducer-users';
 
 // Boards Reducers
+import BoardReducer from './boards/board-list';
+import ActiveBoard from './boards/active-board';
 
 // Radio Reducers
-import channelsReducer from './radio/channels';
+import ChannelsReducer from './radio/channels';
 
 // Shop Reducers
 import CategoryReducer from './shop/categories';
@@ -26,7 +28,11 @@ const allReducers = combineReducers({
    auth: authReducer,
 
    // Radio
-   channels: channelsReducer,
+   channels: ChannelsReducer,
+
+   // Boards
+   boards: BoardReducer,
+   activeBoard: ActiveBoard
 });
 
 export default allReducers;

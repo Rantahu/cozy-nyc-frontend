@@ -3,12 +3,16 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {Link} from 'react-router';
 
+
 class ChannelList extends Component {
   createListItems() {
     return this.props.channels.map((channel) => {
       return (
-        // TODO: Create a variable for channel urls
-        <li><Link to={'radio/{channel.name}'}>{channel.name}</Link></li>
+        <li key={ channel.id }><Link to={{
+          pathname: '/radio/' + channel.slug
+        }} activeClassName="active">
+          {channel.name}
+        </Link></li>
       );
     });
   }

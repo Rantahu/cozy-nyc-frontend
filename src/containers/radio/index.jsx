@@ -9,11 +9,11 @@ class RadioHome extends Component {
   render(){
     return (
       <div>
-        <div id='radio-sidebar'>
+        <div id='radio-sidebar' className='four columns'>
           <ChannelList />
         </div>
 
-        <div id="radio-feature">
+        <div id="radio-feature" className='eight columns'>
           MUSIC
         </div>
 
