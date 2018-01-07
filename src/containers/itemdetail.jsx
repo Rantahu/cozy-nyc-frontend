@@ -20,8 +20,11 @@ class Item extends Component {
       return null;
     return (
       <div>
-        <div id="content" className="visible">
+        <div className='six columns'>
           <img src={item.image}/>
+        </div>
+        
+        <div id="content" className="six columns">
           <h3>{item.name}</h3>
           <h3>${item.price}</h3>
           <h3>Designer</h3>

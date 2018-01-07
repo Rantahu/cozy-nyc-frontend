@@ -4,7 +4,7 @@ import {Link} from 'react-router'
 const ItemBox = (props) => {
 
   var id = parseInt(props.id);
-  var url = '/s/' + id;
+  var url = '/shop/' + id;
 
   return (
 
