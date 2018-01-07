@@ -20,6 +20,15 @@ import Item from "./containers/itemdetail";
 
 // Radio
 import RadioHome from './containers/radio/index';
+import Stream from './containers/radio/stream';
+
+// Boards
+import BoardsHome from './containers/boards/index';
+import Board from './containers/boards/board';
+import Thread from './containers/boards/thread';
+
+// Discovery
+import DiscoveryHome from './containers/discovery/index'
 
 export default(
   <Route path="/" component={App}>
@@ -37,6 +46,15 @@ export default(
 
     // Radio Pages
     <Route path="radio" component={RadioHome} />
+    <Route path="radio/:channelname" component={Stream} />
+
+    // Board Pages
+    <Route path="boards" component={BoardsHome} />
+    <Route path="boards/:boardtag" component={Board} />
+    <Route path="boards/:boardtag/:threadid" component={Thread} />
+
+    // Discovery Pages
+    <Route path="discovery" component={DiscoveryHome} />
 
     // Auth Pages
     <Route path="login" component={Login}/>
