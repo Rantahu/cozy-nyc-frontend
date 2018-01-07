@@ -12,7 +12,7 @@ class Home extends Component {
       <div>
         <canvas id="c"></canvas>
 
-        <div id='home-sidebar'>
+        <div id='home-sidebar' className='four columns'>
 
           <div>
             <Link to={'radio'}>radio</Link>
@@ -27,7 +27,7 @@ class Home extends Component {
           </div>
         </div>
 
-        <div id="home-main">
+        <div id="home-main" className='eight columns'>
           <h1 id="brand-tag">cozy.</h1>
         </div>
 

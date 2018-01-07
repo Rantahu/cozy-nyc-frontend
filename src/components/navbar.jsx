@@ -4,35 +4,37 @@ import {connect} from 'react-redux';
 
 // import SearchBar from './searchbar';
 
-@connect((state) => ({isAuth: state.auth.authenticated}))
 class Navbar extends Component {
-
   render() {
-    const {isAuth} = this.props;
-
+    if (window.location.pathname != '/'){
     return (
       <div id="navbar">
         <span className="dropdown">
-          <a className="dropdown-btn">
+          <span className="dropdown-btn">
             <IndexLink to="/">
               <img id='brand-img' src='/img/cube.svg'/>
             </IndexLink>
-          </a>
+          </span>
           <ul className="dropdown-content">
             <li>
-              <Link to={'/s'}>store</Link>
+              <Link to={'/radio'}>radio</Link>
             </li>
             <li>
-              <Link to={'/about'}>about</Link>
+              <Link to={'/discovery'}>discovery</Link>
             </li>
             <li>
-              <Link to={'/contact'}>contact</Link>
+              <Link to={'/boards'}>boards</Link>
             </li>
           </ul>
         </span>
       </div>
     )
+  }else{
+    return (
+      <div></div>
+    )
   }
+}
 }
 
 export default Navbar;
