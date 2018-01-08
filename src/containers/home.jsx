@@ -9,8 +9,11 @@ class Home extends Component {
     const { isAuth } = this.props;
 
     return (
-      <div>
-        <canvas id="c"></canvas>
+      <div id="home-content">
+
+        <div id="home-featured" className='eight columns'>
+          <h1 id="brand-tag">cozy.</h1>
+        </div>
 
         <div id='home-sidebar' className='four columns'>
 
@@ -25,10 +28,6 @@ class Home extends Component {
             <Link to={'about'}>about</Link>
             <Link to={'contact'}>contact</Link>
           </div>
-        </div>
-
-        <div id="home-main" className='eight columns'>
-          <h1 id="brand-tag">cozy.</h1>
         </div>
 
       </div>

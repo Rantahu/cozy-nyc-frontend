@@ -7,8 +7,10 @@ import BoardList from '../../components/boards/board-list';
 class BoardsHome extends Component {
   render(){
     return (
-      <div>
-        <BoardList />
+      <div id="home-content">
+        <div id="home-featured">
+          <BoardList />
+        </div>
       </div>
     )
   }

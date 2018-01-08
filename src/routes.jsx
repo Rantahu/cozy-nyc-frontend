@@ -6,7 +6,6 @@ import Dashboard from "./containers/dashboard";
 import Home from "./containers/home"
 import About from "./containers/about";
 import Error404 from './components/404-error'
-import RequireAuth from './components/auth/require-auth'
 import Register from './components/auth/register';
 import Login from './components/auth/login';
 import Contact from './containers/contact';
@@ -60,8 +59,7 @@ export default(
     <Route path="login" component={Login}/>
     <Route path="register" component={Register}/>
 
-    //User Pages
-    <Route path="dashboard" component={RequireAuth(Dashboard)}/>
+    // User Pages
 
     //Support Pages
     <Route path="contact" component={Contact}/>

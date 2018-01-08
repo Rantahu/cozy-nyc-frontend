@@ -8,7 +8,7 @@ require('../assets/scss/main.scss');
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div id="content">
         <Navbar />
         {this.props.children}
       </div>

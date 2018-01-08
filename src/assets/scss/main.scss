@@ -1,4 +1,8 @@
 /* HTML5 display-role reset for older browsers */
+html, body, #root, #content {
+  height: 100%;
+}
+
 body {
   line-height: 1;
   background-color: #272727;
@@ -63,26 +67,47 @@ body {
 /* Containers */
 
 // Home Page
-#home-main {
+#home-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#home-featured {
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 20%;
 }
 
 #home-sidebar {
+  text-align: left;
 }
 
-// Radio Home Page
-#radio-feature {
+// Stream
+#stream {
+  height: 100%;
 }
 
-#radio-sidebar {
+#stream-feed {
+  margin: 0 auto;
+  height: 100%;
 }
 
-
-
+#stream-chat {
+  background-color: #F8F5EB;
+  color: #272727;
+  height: 100%;
+  padding: 50px;
+}
 
 // Navbar
 #navbar {
   padding-left: 40px;
   padding-right: 40px;
+  float: left;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 
 #navbar span {

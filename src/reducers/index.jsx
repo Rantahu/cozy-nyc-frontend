@@ -2,7 +2,6 @@ import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
 // Auth/User Reducers
-import authReducer from './reducer-auth';
 import usersReducer from './reducer-users';
 
 // Boards Reducers
@@ -25,7 +24,6 @@ const allReducers = combineReducers({
 
    // Users/auth
    users: usersReducer,
-   auth: authReducer,
 
    // Radio
    channels: ChannelsReducer,
