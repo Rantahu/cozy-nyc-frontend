@@ -7,7 +7,7 @@ import ThreadList from '../../components/boards/thread-list';
 class Board extends Component {
   render(){
     return (
-      <div>
+      <div id="feed">
         <ThreadList />
       </div>
     )

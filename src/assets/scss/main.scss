@@ -100,6 +100,25 @@ body {
   padding: 50px;
 }
 
+// Feed content
+#feed {
+  margin: 0 auto;
+  min-height: 100%;
+  text-align: center;
+  padding: 80px 50px;
+}
+
+// Boards
+.thread-box {
+  height: 500px;
+}
+
+.thread-box-content {
+  background-color: #555555;
+  height: 95%;
+  margin: 15px;
+}
+
 // Navbar
 #navbar {
   padding-left: 40px;
