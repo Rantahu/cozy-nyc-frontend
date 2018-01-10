@@ -1,0 +1,71 @@
+// Navbar
+#navbar {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  float: left;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+#navbar span {
+  display: inline-block;
+}
+
+#navbar-logo {
+  float: left;
+}
+
+#navbar-profile{
+  float: right;
+}
+
+// Dropdown menu css
+.dropdown-btn {
+  text-align: left;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F8F5EB;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #272727;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: #FFD8E5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-btn {
+  fill: #272727;
+}
+
+.dropdown:hover .dropdown-btn a {
+  color: #272727;
+}

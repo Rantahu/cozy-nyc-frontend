@@ -3,13 +3,14 @@ import {IndexLink, Link} from 'react-router'
 import {connect} from 'react-redux';
 
 // import SearchBar from './searchbar';
+import ProfileButton from '../components/profiles/profile-button';
 
 class Navbar extends Component {
   render() {
     if (window.location.pathname != '/'){
     return (
       <div id="navbar">
-        <span className="dropdown">
+        <div id="navbar-logo" className="dropdown">
           <span className="dropdown-btn">
             <IndexLink to="/">
               <img id='brand-img' src='/img/cube.svg'/>
@@ -26,12 +27,17 @@ class Navbar extends Component {
               <Link to={'/boards'}>boards</Link>
             </li>
           </ul>
-        </span>
+        </div>
+
+        <div id="navbar-profile">
+          <ProfileButton />
+        </div>
+        <div className='u-cf'></div>
       </div>
     )
   }else{
     return (
-      <div></div>
+      <div className='u-cf'></div>
     )
   }
 }

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Link} from 'react-router';
 import { Provider, connect } from 'react-redux';
 
+import ProfileButton from '../components/profiles/profile-button';
 
 class Home extends Component {
   render(){
@@ -16,7 +17,9 @@ class Home extends Component {
         </div>
 
         <div id='home-sidebar' className='four columns'>
-
+          <div>
+            <ProfileButton />
+          </div>
           <div>
             <Link to={'radio'}>radio</Link>
             <Link to={'discovery'}>discovery</Link>

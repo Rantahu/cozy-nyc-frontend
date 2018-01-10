@@ -1,0 +1,25 @@
+#profile-button {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+  display: inline-block;
+}
+
+#user-profile-status {
+  float:left;
+  text-align: right;
+}
+
+#user-profile-status p {
+  padding: 0;
+  margin: 0;
+}
+
+#user-profile-avatar {
+  float: right;
+  text-align: left;
+}
+
+.profile-image {
+  height: 50px;
+}
