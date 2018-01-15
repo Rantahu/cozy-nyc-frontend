@@ -13,7 +13,7 @@ class ProfileButton extends Component {
           <p>{ this.props.user.rep }</p>
         </div>
         <div id='user-profile-avatar'>
-          <img className='profile-image' src='https://i.redd.it/ibcr0wkcxlpz.jpg'/>
+          <img className='profile-image' src={this.props.user.avatarUrl}/>
         </div>
         <div className='u-cf'></div>
       </div>

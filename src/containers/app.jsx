@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 import Navbar from '../components/navbar';
 
-require('../assets/scss/skeleton.scss');
 require('../assets/scss/main.scss');
 
 class App extends Component {

@@ -9,13 +9,13 @@ class ThreadList extends Component {
     return this.props.threads.map((thread) => {
       return (
         <div className='three columns thread-box' key={ thread.id }>
-          <div className='thread-box-content'>
-            <Link to={{
-              pathname: '/boards/' + this.props.board.board_tag + '/' + thread.id
-            }} activeClassName="active">
-              {thread.title}
-            </Link>
-          </div>
+          <Link className='thread-box-content' to={{
+            pathname: '/boards/' + this.props.board.board_tag + '/' + thread.id
+          }} activeClassName="active">
+            <div>
+                {thread.title}
+            </div>
+          </Link>
         </div>
       );
     });

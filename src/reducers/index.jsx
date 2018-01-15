@@ -8,6 +8,7 @@ import usersReducer from './users';
 // Boards Reducers
 import BoardReducer from './boards/board-list';
 import ActiveBoard from './boards/active-board';
+import ActiveThread from './boards/active-thread';
 
 // Radio Reducers
 import ChannelsReducer from './radio/channels';
@@ -32,7 +33,8 @@ const allReducers = combineReducers({
 
    // Boards
    boards: BoardReducer,
-   activeBoard: ActiveBoard
+   activeBoard: ActiveBoard,
+   activeThread: ActiveThread
 });
 
 export default allReducers;

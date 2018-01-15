@@ -1,16 +1,14 @@
 import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
+
+import Posts from '../../components/boards/posts';
 
 class Thread extends Component {
   render(){
     return (
-      <div>
-        <div className='eight columns'>
-          blah blah blah
-        </div>
-
-        <div className='four columns'>
+      <div id='thread-wrapper'>
+        <Posts />
+        <div id='thread-sidebar' className='four columns'>
           stats stats stats
         </div>
       </div>

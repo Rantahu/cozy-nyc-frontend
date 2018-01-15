@@ -14,7 +14,6 @@ import Contact from './containers/contact';
 import Shop from './containers/shop';
 import Checkout from './containers/checkout';
 import Brand from './containers/brand';
-import Sell from './containers/sell';
 import Item from "./containers/itemdetail";
 
 // Radio
@@ -38,7 +37,6 @@ export default(
 
     // Shop Pages
     <Route path="shop" component={Shop} />
-    <Route path="shop/sell" component={Sell}/>
     <Route path="shop/checkout" component={Checkout}/>
     <Route path="shop/:itemid" component={Item}/>
     <Route path="p/:brandslug" component={Brand}/>

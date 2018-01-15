@@ -1,15 +1,45 @@
+/* Base files. */
+@import "base/normalize";
+@import "base/variables";
+@import "base/functions";
+@import "base/base-styles";
+@import "base/utils";
+@import "base/typography";
+
+/* Modules */
+@import "modules/grid";
+@import "modules/buttons";
+@import "modules/forms";
+@import "modules/lists";
+@import "modules/code";
+@import "modules/tables";
+@import "modules/spacing";
+@import "modules/media-queries";
+
+
+/* Pages */
+@import 'pages/home';
+@import 'pages/radio';
+@import 'pages/discovery';
+@import 'pages/boards';
+
+
 @import 'profiles';
 @import 'navbar';
 
-// Pages
-@import 'home';
-
-/* HTML5 display-role reset for older browsers */
-html, body, #root, #content {
+#content,
+#root,
+body,
+html {
   height: 100%;
 }
 
 body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   line-height: 1;
   background-color: #272727;
   color: #F8F5EB;
@@ -57,95 +87,34 @@ a:visited {
   display: block;
   text-decoration: none;
 }
-
-body {
-  -webkit-user-select: none;
-  /* Chrome/Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+ */
-  /* Rules below not implemented in browsers yet */
-  -o-user-select: none;
-  user-select: none;
-}
-
 /* Containers */
-
-// Home Page
-#home-content {
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-#home-featured {
-  text-align: center;
-  margin: 0 auto;
-  padding: 0 20%;
-}
-
-#home-sidebar {
-  text-align: left;
-}
-
-// Stream
-#stream {
-  height: 100%;
-}
-
-#stream-feed {
-  margin: 0 auto;
-  height: 100%;
-}
-
-#stream-chat {
-  background-color: #F8F5EB;
-  color: #272727;
-  height: 100%;
-  padding: 50px;
-}
-
-// Feed content
-#feed {
+#container {
   margin: 0 auto;
   min-height: 100%;
+  height: 100%;
   text-align: center;
   padding: 80px 50px;
 }
 
-// Boards
-.thread-box {
-  height: 500px;
-}
-
-.thread-box-content {
-  background-color: #555555;
-  height: 95%;
-  margin: 15px;
-}
-
-canvas {
-  position: fixed;
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  float: left;
-  z-index: -100;
-}
+// canvas {
+//   position: fixed;
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden;
+//   float: left;
+//   z-index: -100;
+// }
 
 textarea {
   height: 150px;
-  padding: 5px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
   border-radius: 4px;
   background-color: #F8F5EB;
-  font-size: 12px;
   resize: none;
   display: block;
   margin: 10px auto;
+  width: 75%;
+  color: #272727;
 }
 
 form {
@@ -154,30 +123,14 @@ form {
 
 input {
   margin: 10px auto;
-  width: 57%;
-}
-
-.container {
-  color: #F8F5EB;
-  font: Dosis;
-}
-
-.message {
-  text-align: center;
+  width: 74%;
+  background-color: #F8F5EB;
 }
 
 .contactform {
   width: 300px;
   margin: auto;
   padding-top: 20px;
-}
-
-.item-block {
-  height: 30vw;
-}
-
-.center {
-  text-align: center;
 }
 
 #brand-img {

@@ -7,7 +7,7 @@ import ItemQuery from '../components/itemquery';
 
 const Shop = () => {
    return (
-     <div>
+     <div id='feed'>
       <div>
         <ItemQuery />
       </div>
