@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
 // Auth/User Reducers
-import userReducer from './user/active-user'
+import activeUserReducer from './user/active-user'
 import usersReducer from './users';
 
 // Boards Reducers
@@ -25,7 +25,7 @@ const allReducers = combineReducers({
    cart: cartReducer,
 
    // Users/auth
-   user: userReducer,
+   activeUser: activeUserReducer,
    users: usersReducer,
 
    // Radio

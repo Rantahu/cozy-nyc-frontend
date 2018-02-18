@@ -22,6 +22,7 @@
 @import 'pages/radio';
 @import 'pages/discovery';
 @import 'pages/boards';
+@import 'pages/profile';
 
 
 @import 'profiles';
@@ -83,7 +84,7 @@ h2 {
 a,
 a:visited {
   color: #F8F5EB;
-  line-height: 30px;
+  // line-height: 30px;
   display: block;
   text-decoration: none;
 }

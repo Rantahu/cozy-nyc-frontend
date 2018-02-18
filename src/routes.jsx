@@ -2,12 +2,9 @@ import React from "react";
 import {IndexRoute, Route} from "react-router";
 
 import App from "./containers/app";
-import Dashboard from "./containers/dashboard";
 import Home from "./containers/home"
 import About from "./containers/about";
 import Error404 from './components/404-error'
-import Register from './components/auth/register';
-import Login from './components/auth/login';
 import Contact from './containers/contact';
 
 // Shop
@@ -26,7 +23,13 @@ import Board from './containers/boards/board';
 import Thread from './containers/boards/thread';
 
 // Discovery
-import DiscoveryHome from './containers/discovery/index'
+import DiscoveryHome from './containers/discovery/index';
+
+// Profiles/User
+import Register from './components/auth/register';
+import Login from './components/auth/login';
+import Dashboard from "./containers/profiles/dashboard";
+import Profile from './containers/profiles/profile';
 
 export default(
   <Route path="/" component={App}>
@@ -58,6 +61,7 @@ export default(
     <Route path="register" component={Register}/>
 
     // User Pages
+    <Route path='u/:username' component={Profile} />
 
     //Support Pages
     <Route path="contact" component={Contact}/>

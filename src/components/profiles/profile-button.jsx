@@ -9,11 +9,15 @@ class ProfileButton extends Component {
     return (
       <div id='profile-button'>
         <div id='user-profile-status'>
-          <p>{ this.props.user.username }</p>
+          <Link to={'/u/' + this.props.user.username}>
+            <p>{ this.props.user.username }</p>
+          </Link>
           <p>{ this.props.user.rep }</p>
         </div>
         <div id='user-profile-avatar'>
-          <img className='profile-image' src={this.props.user.avatarUrl}/>
+          <Link to={'/u/' + this.props.user.username}>
+            <img className='profile-image' src={this.props.user.avatarUrl}/>
+          </Link>
         </div>
         <div className='u-cf'></div>
       </div>
@@ -23,7 +27,7 @@ class ProfileButton extends Component {
 
 function mapStateToProps(state) {
   return {
-    user: state.user
+    user: state.activeUser
   };
 }
 
