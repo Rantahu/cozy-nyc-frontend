@@ -7,7 +7,7 @@ import {AUTH_USER} from './actions/auth/types';
 
 import store from './store';
 import routes from './routes';
-import App from './containers/app'
+import App from './containers/app';
 
 // This is the place where we can load elements from a cookie to be used in our app
 

@@ -4,6 +4,10 @@ import {Provider} from 'react-redux';
 
 import ThreadList from '../../components/boards/thread-list';
 
+/**
+ * Board Page
+ * List active threads in current board
+ */
 class Board extends Component {
   render(){
     return (

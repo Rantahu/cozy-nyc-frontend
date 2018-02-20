@@ -3,6 +3,11 @@ import ReactDOM from 'react-dom';
 
 import Posts from '../../components/boards/posts';
 
+/**
+ * Thread Page
+ *
+ * ToDo: Add stats for thread
+ */
 class Thread extends Component {
   render(){
     return (

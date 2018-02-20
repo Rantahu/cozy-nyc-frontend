@@ -2,7 +2,12 @@ import React, {Component}   from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-
+/**
+ * Contact Page
+ * Forum sends an email to hello@cozy.nyc via formspree
+ *
+ * ToDo: Switch to support ticket system provided by the cozy.nyc backend
+ */
 class Contact extends Component {
   render(){
     return (

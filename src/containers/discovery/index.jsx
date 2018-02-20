@@ -2,6 +2,12 @@ import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+/**
+ * Discovery Home Page
+ * Page to share art works
+ *
+ * ToDo: Add actual content
+ */
 class DiscoveryHome extends Component {
   render(){
     return (

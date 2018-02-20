@@ -8,10 +8,9 @@ import Error404 from './components/404-error'
 import Contact from './containers/contact';
 
 // Shop
-import Shop from './containers/shop';
-import Checkout from './containers/checkout';
-import Brand from './containers/brand';
-import Item from "./containers/itemdetail";
+import Shop from './containers/shop/index';
+import Checkout from './containers/shop/checkout';
+import Item from "./containers/shop/itemdetail";
 
 // Radio
 import RadioHome from './containers/radio/index';
@@ -28,7 +27,6 @@ import DiscoveryHome from './containers/discovery/index';
 // Profiles/User
 import Register from './components/auth/register';
 import Login from './components/auth/login';
-import Dashboard from "./containers/profiles/dashboard";
 import Profile from './containers/profiles/profile';
 
 export default(
@@ -42,7 +40,6 @@ export default(
     <Route path="shop" component={Shop} />
     <Route path="shop/checkout" component={Checkout}/>
     <Route path="shop/:itemid" component={Item}/>
-    <Route path="p/:brandslug" component={Brand}/>
 
     // Radio Pages
     <Route path="radio" component={RadioHome} />
