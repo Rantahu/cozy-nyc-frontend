@@ -13,7 +13,13 @@ class ThreadList extends Component {
             pathname: '/boards/' + this.props.board.board_tag + '/' + thread.id
           }} activeClassName="active">
             <div>
-                {thread.title}
+                <img className='thread-opimage' src={ thread.image } />
+                <div className='thread-oppost'>
+                  <h4>{ thread.title }</h4>
+                  <p>{ thread.blurb }</p>
+                  <br />
+                  v: { thread.views } r: { thread.replyCount } i: { thread.imageCount }
+                </div>
             </div>
           </Link>
         </div>

@@ -17,6 +17,13 @@
   margin: 15px;
 }
 
+.thread-opimage {
+  width: 100%;
+}
+
+.thread-oppost {
+}
+
 // Thread Page
 #thread-wrapper {
   height: 100%;
@@ -40,6 +47,7 @@
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
 }
+
 
 
 // Messages/Post

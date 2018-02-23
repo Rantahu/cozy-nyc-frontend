@@ -6,20 +6,38 @@ import {Link} from 'react-router';
 
 class Post extends Component {
   render() {
-    return (
-      <div className='message-wrapper'>
-        <div className='message-poster'>
-          <img className='profile-image' src={ this.props.user.avatarUrl } />
-          <p>{ this.props.user.username }</p>
+    if ( this.props.image == null ){
+      return (
+        <div className='message-wrapper'>
+          <div className='message-poster'>
+            <img className='profile-image' src={ this.props.user.avatarUrl } />
+            <p>{ this.props.user.username }</p>
+          </div>
+          <div className='message-bubble'>
+            { this.props.message }
+          </div>
+          <span>
+            { this.props.date }
+          </span>
         </div>
-        <div className='message-bubble'>
-          { this.props.message }
+      )
+    }else{
+      return (
+        <div className='message-wrapper'>
+          <div className='message-poster'>
+            <img className='profile-image' src={ this.props.user.avatarUrl } />
+            <p>{ this.props.user.username }</p>
+          </div>
+          <div className='message-bubble'>
+            <img className='post-image' src={ this.props.image } />
+            { this.props.message }
+          </div>
+          <span>
+            { this.props.date }
+          </span>
         </div>
-        <span>
-          { this.props.date }
-        </span>
-      </div>
-    );
+      )
+    }
   }
 }
 

@@ -13,6 +13,7 @@ class ThreadFeed extends Component {
         <Post
           id={ post.id }
           user={ post.poster }
+          image={ post.image }
           message={ post.message }
           date={ post.date } />
         </div>
@@ -26,6 +27,7 @@ class ThreadFeed extends Component {
         <h1> { this.props.thread.title } </h1>
         {this.createListItems()}
       </div>
+
     );
   }
 }
