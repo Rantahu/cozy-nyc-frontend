@@ -1,15 +1,15 @@
 export default function() {
   return {
       board_tag: "t",
-      title: "Hello",
+      title: "I'M ONLINE",
       views: '12',
-      imageCount: '0',
-      images: [],
+      imageCount: '1',
       replyCount: '2',
       posterCount: '2',
       posts: [
         {
           id: 1,
+          image: 'http://i.imgur.com/4WV4TzY.png',
           message: "Hello",
           date: '',
           poster: {
@@ -20,6 +20,7 @@ export default function() {
         },
         {
           id: 2,
+          image: null,
           message: "fuck you",
           date: '',
           poster: {
@@ -30,6 +31,7 @@ export default function() {
         },
         {
           id: 3,
+          image: null,
           message: "goodbye",
           date: '',
           poster: {
@@ -39,6 +41,5 @@ export default function() {
           }
         },
       ],
-      posters: []
   }
 }

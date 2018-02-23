@@ -4,44 +4,104 @@ export default function() {
       threads: [
         {
           id: 1,
+          image: 'http://i.imgur.com/4WV4TzY.png',
           title: "/wdg/ - Web Development",
-          tag: "g"
+          blurb: "Est magna nostrud arbitrantur, minim vidisse id nostrud. Vidisse tamen
+          mandaremus nostrud.",
+          views: '12',
+          replyCount: '2',
+          posterCount: '2',
+          poster: 'rantahu'
         }, {
           id: 2,
+          image: 'http://i.imgur.com/4WV4TzY.png',
           title: "Intel Class Action Lawsuit",
-          tag: "t"
+          blurb: "Est magna nostrud arbitrantur, minim vidisse id nostrud. Vidisse tamen
+          mandaremus nostrud.",
+          views: '12',
+          replyCount: '2',
+          posterCount: '2',
+          poster: 'rantahu'
         }, {
           id: 3,
+          image: 'http://i.imgur.com/4WV4TzY.png',
           title: "AMD > Intel",
-          tag: "m"
+          blurb: "Est magna nostrud arbitrantur, minim vidisse id nostrud. Vidisse tamen
+          mandaremus nostrud.",
+          views: '12',
+          replyCount: '2',
+          posterCount: '2',
+          poster: 'rantahu'
         }, {
           id: 4,
+          image: 'http://i.imgur.com/4WV4TzY.png',
           title: "best graphic design programs",
-          tag: "d"
+          blurb: "Est magna nostrud arbitrantur, minim vidisse id nostrud. Vidisse tamen
+          mandaremus nostrud.",
+          views: '12',
+          replyCount: '2',
+          posterCount: '2',
+          poster: 'rantahu'
         }, {
           id: 5,
+          image: 'http://i.imgur.com/4WV4TzY.png',
           title: "I bought a macbook",
-          tag: "a"
+          blurb: "Est magna nostrud arbitrantur, minim vidisse id nostrud. Vidisse tamen
+          mandaremus nostrud.",
+          views: '12',
+          replyCount: '2',
+          posterCount: '2',
+          poster: 'rantahu'
         }, {
           id: 6,
+          image: 'http://i.imgur.com/4WV4TzY.png',
           title: "Personal rig done right",
-          tag: "f"
+          blurb: "Est magna nostrud arbitrantur, minim vidisse id nostrud. Vidisse tamen
+          mandaremus nostrud.",
+          views: '12',
+          replyCount: '2',
+          posterCount: '2',
+          poster: 'rantahu'
         }, {
           id: 7,
+          image: 'http://i.imgur.com/4WV4TzY.png',
           title: "i sleep",
-          tag: "v"
+          blurb: "Est magna nostrud arbitrantur, minim vidisse id nostrud. Vidisse tamen
+          mandaremus nostrud.",
+          views: '12',
+          replyCount: '2',
+          posterCount: '2',
+          poster: 'rantahu'
         }, {
           id: 8,
+          image: 'http://i.imgur.com/4WV4TzY.png',
           title: ">I use apple products to impress girls",
-          tag: "tv"
+          blurb: "Est magna nostrud arbitrantur, minim vidisse id nostrud. Vidisse tamen
+          mandaremus nostrud.",
+          views: '12',
+          replyCount: '2',
+          posterCount: '2',
+          poster: 'rantahu'
         }, {
           id: 9,
+          image: 'http://i.imgur.com/4WV4TzY.png',
           title: "linus",
-          tag: "ck"
+          blurb: "Est magna nostrud arbitrantur, minim vidisse id nostrud. Vidisse tamen
+          mandaremus nostrud.",
+          views: '12',
+          replyCount: '2',
+          posterCount: '2',
+          poster: 'rantahu'
         }, {
           id: 10,
+          image: 'http://i.imgur.com/4WV4TzY.png',
           title: "Is C worth learing, if so why?",
-          tag: "pc"
+          blurb: "Est magna nostrud arbitrantur, minim vidisse id nostrud. Vidisse tamen
+          mandaremus nostrud.",
+          views: '12',
+          replyCount: '2',
+          posterCount: '2',
+          poster: 'rantahu'
         }
       ],
   }
