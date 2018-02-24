@@ -8,8 +8,8 @@ class PopupForum extends Component {
     return (
       <div id='reply-forum-popup'>
         <div className='popup_inner'>
-          <input name="image" type="text" /> <button>enter</button>
-          <textarea name="message" />
+          <input name="image" type="file" /> <button>enter</button>
+          <textarea name="message" placeholder=">sample text." />
         </div>
       </div>
     );
@@ -37,7 +37,7 @@ class ReplyForum extends Component {
     return (
       <div id='reply-forum'>
         { popup }
-        <button id="reply-button-img" onClick={() => this.togglePopup() }> reply </button>
+        <button id="reply-button" onClick={() => this.togglePopup() }> reply </button>
       </div>
     )
 

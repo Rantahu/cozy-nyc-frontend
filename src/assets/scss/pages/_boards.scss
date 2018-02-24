@@ -28,16 +28,25 @@
   position: fixed;
   bottom: 0;
   right: 0;
+  z-index: 10;
+}
+
+#thread-forum-popup {
+  margin: 20px;
+  background: #aaa;
+  color: #333;
+  text-align: left;
 }
 
 // Thread Page
 #thread-wrapper {
+  position: relative;
   height: 100%;
   overflow:auto;
 }
 
 #thread-content {
-  position: relative;
+  position: absolute;
   text-align: left;
   margin: 0 auto;
   padding: 120px 50px;
@@ -95,13 +104,17 @@
 }
 
 #reply-forum {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  right: 0;
+  right: 40%;
+  transform: translateX(50%);
   z-index: 10;
 }
 
 #reply-forum-popup {
+  display: inline-block;
+  margin: 20px;
+  background: #aaa;
   color: #333;
   float: left;
 }

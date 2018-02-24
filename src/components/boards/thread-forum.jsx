@@ -8,9 +8,9 @@ class PopupForum extends Component {
     return (
       <div id='thread-forum-popup'>
         <div className='popup_inner'>
-          <input name="subject" type="text"/>
-          <input name="image" type="text" /> <button>enter</button>
-          <textarea name="message" />
+          <input name="subject" type="text" placeholder="subject."/>
+          <input name="image" type="file" /> <button>enter</button>
+          <textarea name="message"  placeholder=">sample text"/>
         </div>
       </div>
     );
@@ -26,11 +26,9 @@ class ThreadForum extends Component {
   }
 
   togglePopup() {
-    console.log('noot');
     this.setState({
       showPopupForum:!this.state.showPopupForum
     });
-    console.log(this.state);
   }
 
   render() {
