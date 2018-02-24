@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {getItem} from '../actions/items/get';
+import {getItem} from '../../actions/items/get';
 import {connect} from 'react-redux';
 
+/**
+ * Individual Item page
+ *
+ */
 @connect((state) => {
   return {item: state.items.activeitem};
 })
@@ -23,7 +27,7 @@ class Item extends Component {
         <div className='six columns'>
           <img src={item.image}/>
         </div>
-        
+
         <div id="content" className="six columns">
           <h3>{item.name}</h3>
           <h3>${item.price}</h3>

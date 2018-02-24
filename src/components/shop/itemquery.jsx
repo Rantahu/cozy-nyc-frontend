@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { fetchItems } from '../actions/items/get';
+import { fetchItems } from '../../actions/items/get';
 
 import ItemBox from './itembox';
 

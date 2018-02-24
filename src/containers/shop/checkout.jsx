@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {getItem} from '../actions/items/get';
+import {getItem} from '../../actions/items/get';
 import {connect} from 'react-redux';
 
+
+/**
+ * Checkout page for cozy.nyc shop
+ *
+ */
 @connect((store) => {
    return {
       // item: store.items.activeitem

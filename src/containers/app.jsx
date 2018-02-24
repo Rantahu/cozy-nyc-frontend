@@ -4,6 +4,10 @@ import Navbar from '../components/navbar';
 
 require('../assets/scss/main.scss');
 
+/**
+ * Standard React app wrapper with the navbar.
+ *
+ */
 class App extends Component {
   render() {
     return (

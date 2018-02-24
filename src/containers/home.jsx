@@ -5,6 +5,11 @@ import { Provider, connect } from 'react-redux';
 
 import ProfileButton from '../components/profiles/profile-button';
 
+/**
+ * Home Page
+ * Links to pages on the site.
+ *
+ */
 class Home extends Component {
   render(){
     const { isAuth } = this.props;

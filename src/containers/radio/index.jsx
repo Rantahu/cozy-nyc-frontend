@@ -5,6 +5,12 @@ import { Provider, connect } from 'react-redux';
 
 import ChannelList from '../../components/radio/channel-list';
 
+/**
+ * Radio Home Page
+ * List current streams featured by cozy.nyc
+ *
+ * ToDo: div id 'radio-featured' should display image or preview of stream.
+ */
 class RadioHome extends Component {
   render(){
     return (

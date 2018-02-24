@@ -1,6 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+/**
+ * User Profile Page
+ * Displays information about the user
+ *
+ * ToDo: Add edit options when the current user is on their own page.
+ */
 class Profile extends Component {
   render() {
     return (

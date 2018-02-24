@@ -2,6 +2,11 @@ import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+/**
+ * Stream Page
+ * Displays video/media feed and chat feed
+ *
+ */
 class Stream extends Component {
   render(){
     return (
