@@ -29,8 +29,10 @@ class Post extends Component {
             <p>{ this.props.user.username }</p>
           </div>
           <div className='message-bubble'>
-            <img className='post-image' src={ this.props.image } />
-            { this.props.message }
+            <img className='message-image' src={ this.props.image } />
+            <span className='message-text'>
+              { this.props.message }
+            </span>
           </div>
           <span>
             { this.props.date }

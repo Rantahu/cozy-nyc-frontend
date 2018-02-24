@@ -15,7 +15,6 @@ class Thread extends Component {
       <div id='thread-wrapper'>
         <ThreadFeed />
         <ThreadStats />
-        <div className='u-cf'></div>
       </div>
     )
   }

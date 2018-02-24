@@ -10,7 +10,7 @@ export default function() {
         {
           id: 1,
           image: 'http://i.imgur.com/4WV4TzY.png',
-          message: "Hello",
+          message: "I'M IN YOUR AREA!",
           date: '',
           poster: {
             userID: 1,

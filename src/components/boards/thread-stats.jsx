@@ -2,7 +2,6 @@ import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 
-
 /**
  * Thread Stats
  *
@@ -28,8 +27,6 @@ class ThreadStats extends Component {
         <p>replies: { this.props.thread.replyCount }</p>
         <p>images: { this.props.thread.imageCount }</p>
         <p>views: { this.props.thread.views }</p>
-
-
 
       </div>
     )

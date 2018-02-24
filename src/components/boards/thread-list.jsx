@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {Link} from 'react-router';
 
+import ThreadForum from './thread-forum'
 
 class ThreadList extends Component {
   createListItems() {
@@ -31,6 +32,7 @@ class ThreadList extends Component {
     return (
       <ul>
         {this.createListItems()}
+        <ThreadForum />
       </ul>
     );
   }
