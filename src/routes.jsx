@@ -34,34 +34,34 @@ export default(
     <IndexRoute component={Home}/>
 
     // Static Pages
-    <Route path="about" component={About}/>
+    <Route path="/about" component={About}/>
 
     // Shop Pages
-    <Route path="shop" component={Shop} />
-    <Route path="shop/checkout" component={Checkout}/>
-    <Route path="shop/:itemid" component={Item}/>
+    <Route path="/shop" component={Shop} />
+    <Route path="/shop/checkout" component={Checkout}/>
+    <Route path="/shop/:itemid" component={Item}/>
 
     // Radio Pages
-    <Route path="radio" component={RadioHome} />
-    <Route path="radio/:channelname" component={Stream} />
+    <Route path="/radio" component={RadioHome} />
+    <Route path="/radio/:channelname" component={Stream} />
 
     // Board Pages
-    <Route path="boards" component={BoardsHome} />
-    <Route path="boards/:boardtag" component={Board} />
-    <Route path="boards/:boardtag/:threadid" component={Thread} />
+    <Route path="/boards" component={BoardsHome} />
+    <Route path="/boards/:boardtag" component={Board} />
+    <Route path="/boards/:boardtag/:threadid" component={Thread} />
 
     // Discovery Pages
-    <Route path="discovery" component={DiscoveryHome} />
+    <Route path="/discovery" component={DiscoveryHome} />
 
     // Auth Pages
-    <Route path="login" component={Login}/>
-    <Route path="register" component={Register}/>
+    <Route path="/login" component={Login}/>
+    <Route path="/register" component={Register}/>
 
     // User Pages
-    <Route path='u/:username' component={Profile} />
+    <Route path='/u/:username' component={Profile} />
 
     //Support Pages
-    <Route path="contact" component={Contact}/>
+    <Route path="/contact" component={Contact}/>
 
     // Error pages
     <Route path='*' component={Error404}/>
