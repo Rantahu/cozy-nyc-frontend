@@ -8,7 +8,7 @@ class BoardList extends Component {
   createListItems() {
     return this.props.boards.map((board) => {
       return (
-        <span className='four columns' key={ board.id }><Link to={{
+        <span className='row' key={ board.id }><Link to={{
           pathname: '/boards/' + board.tag
         }} activeClassName="active">
           /{board.tag}/ - {board.name}
@@ -20,7 +20,7 @@ class BoardList extends Component {
   render() {
     return (
       <ul>
-        {this.createListItems()}
+        { this.createListItems() }
       </ul>
     );
   }
