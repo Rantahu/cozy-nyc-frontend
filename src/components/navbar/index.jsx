@@ -16,41 +16,52 @@ class Navbar extends Component {
     };
   }
 
-  toggleSidebarMenu(){
+  openSidebarMenu(){
     this.setState({
-      showSidebarMenu:!this.state.showSidebarMenu,
+      showSidebarMenu: true,
       showProfileMenu: false
     });
   }
 
-  toggleProfileMenu(){
+  openProfileMenu(){
     this.setState({
-      showProfileMenu:!this.state.showProfileMenu,
+      showProfileMenu:true,
       showSidebarMenu: false
     });
   }
 
+  closeNavMenu(){
+    this.setState({
+      showSidebarMenu: false,
+      showProfileMenu: false
+    });
+  }
+
   render() {
-    if (window.location.pathname != '/'){
-      const sidebarmenu = (this.state.showSidebarMenu ?
+    if ( window.location.pathname != '/' ){
+      const sidebarmenu = ( this.state.showSidebarMenu ?
           <div id="navbar-logo" className="dropdown">
-            <span className="dropdown-btn" onClick={ () => this.toggleSidebarMenu() }>
-                <img id='brand-img' src='/img/cube.svg'/>
+            <span className="dropdown-btn" onClick={ () => this.closeNavMenu() }>
+              <img id='brand-img' src='/img/cube.svg'/>
             </span>
             <SidebarMenu />
+            <span onClick={ () => this.closeNavMenu() }> <h1>huds</h1> </span>
           </div>
         : <div id="navbar-logo" className="dropdown">
-            <span className="dropdown-btn" onClick={ () => this.toggleSidebarMenu() }>
-                <img id='brand-img' src='/img/cube.svg'/>
+            <span className="dropdown-btn" onClick={ () => this.openSidebarMenu() }>
+              <img id='brand-img' src='/img/cube.svg'/>
             </span>
           </div>);
 
-      const profilemenu = (this.state.showProfileMenu ?
-        <div id="navbar-profile" onClick={ () => this.toggleProfileMenu() }>
-          <ProfileButton />
+      const profilemenu = ( this.state.showProfileMenu ?
+        <div id="navbar-profile">
+          <span onClick={ () => this.closeNavMenu() }>
+            <ProfileButton />
+          </span>
           <ProfileMenu />
+          <span onClick={ () => this.closeNavMenu() }> <h1>huds</h1> </span>
         </div>
-      : <div id="navbar-profile" onClick={ () => this.toggleProfileMenu() }>
+      : <div id="navbar-profile" onClick={ () => this.openProfileMenu() }>
           <ProfileButton />
         </div>);
 
@@ -62,6 +73,7 @@ class Navbar extends Component {
           { profilemenu }
 
           <div className='u-cf'></div>
+
         </div>
       )
     }else{
@@ -71,5 +83,6 @@ class Navbar extends Component {
     }
   }
 }
+
 
 export default Navbar;
