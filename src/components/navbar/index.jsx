@@ -45,7 +45,7 @@ class Navbar extends Component {
               <img id='brand-img' src='/img/cube.svg'/>
             </span>
             <SidebarMenu />
-            <span onClick={ () => this.closeNavMenu() }> <h1>huds</h1> </span>
+            <span className="sidebar-exit" onClick={ () => this.closeNavMenu() }> </span>
           </div>
         : <div id="navbar-logo" className="dropdown">
             <span className="dropdown-btn" onClick={ () => this.openSidebarMenu() }>
@@ -59,7 +59,7 @@ class Navbar extends Component {
             <ProfileButton />
           </span>
           <ProfileMenu />
-          <span onClick={ () => this.closeNavMenu() }> <h1>huds</h1> </span>
+          <span className="sidebar-exit" onClick={ () => this.closeNavMenu() }> </span>
         </div>
       : <div id="navbar-profile" onClick={ () => this.openProfileMenu() }>
           <ProfileButton />
