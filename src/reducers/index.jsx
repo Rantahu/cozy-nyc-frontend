@@ -2,8 +2,8 @@ import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
 // Auth/User Reducers
-import activeUserReducer from './user/active-user'
-import usersReducer from './users';
+import activeUserReducer from './user/active-user';
+import usersReducer from './user/user-list';
 
 // Boards Reducers
 import BoardReducer from './boards/board-list';

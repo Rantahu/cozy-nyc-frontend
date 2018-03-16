@@ -1,54 +1,28 @@
-export default function(){
-   return[
-     {
-       id: 1,
-       name: "general",
-       tag: "g"
-     },
-     {
-       id: 2,
-       name: "technolgy",
-       tag: "t"
-     },
-     {
-       id: 3,
-       name: "music",
-       tag: "m"
-     },
-     {
-       id: 4,
-       name: "graphic design",
-       tag: "d"
-     },
-     {
-       id: 5,
-       name: "art",
-       tag: "a"
-     },
-     {
-       id: 6,
-       name: "fashion",
-       tag: "f"
-     },
-     {
-       id: 7,
-       name: "video games",
-       tag: "v"
-     },
-     {
-       id: 8,
-       name: "shows & movies",
-       tag: "tv"
-     },
-     {
-       id: 9,
-       name: "food & cooking",
-       tag: "ck"
-     },
-     {
-       id: 10,
-       name: "politics & culture",
-       tag: "pc"
-     }
-   ]
- }
+export default function Reducer(
+   state={
+      fetching: false,
+      fetched: false,
+      boards: [],
+      error: null,
+   }, action) {
+   switch (action.type) {
+      case "FETCH_BOARDS_PENDING": {
+         return {...state, fetching: true}
+         break;
+      }
+      case "FETCH_BOARDS_REJECTED":{
+         return {...state, fecthing: false, error: action.payload}
+         break;
+      }
+      case "FETCH_BOARDS_FULFILLED": {
+         return {
+            ...state,
+            fecthing: false,
+            fetched: true,
+            boards: action.payload,
+            }
+         break;
+      }
+   }
+   return state;
+};

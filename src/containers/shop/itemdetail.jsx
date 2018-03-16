@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
 import {getItem} from '../../actions/items/get';
 import {connect} from 'react-redux';
 
@@ -13,6 +11,7 @@ import {connect} from 'react-redux';
 })
 class Item extends Component {
   componentWillMount() {
+    console.log(this.props)
     this.props.dispatch(getItem(this.props.params.itemid))
   }
 

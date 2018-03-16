@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 let API_HOST = '';
-if (process.env.NODE_ENV === 'production') API_HOST = 'cozy.exchange';
+if (process.env.NODE_ENV === 'production') API_HOST = 'api.cozy.nyc';
 
 module.exports = {
     devtool: 'cheap-module-eval-source-map',

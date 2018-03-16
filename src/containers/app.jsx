@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import Navbar from '../components/navbar';
+import Navbar from '../components/navbar/';
 
 require('../assets/scss/main.scss');
 
