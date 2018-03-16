@@ -3,15 +3,20 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {Link} from 'react-router';
 
-import ThreadForum from './thread-forum'
+import ThreadForum from './thread-forum';
+import { fetchBoard } from '../../actions/boards/get-threads';
 
 class ThreadList extends Component {
+  componentWillMount() {
+     this.props.dispatch(fetchBoard())
+  }
+
   createListItems() {
     return this.props.threads.map((thread) => {
       return (
         <div className='three columns thread-box' key={ thread.id }>
           <Link className='thread-box-content' to={{
-            pathname: '/boards/' + this.props.board.board_tag + '/' + thread.id
+            pathname: '/boards/' + this.props.board.tag + '/' + thread.id
           }} activeClassName="active">
             <div>
                 <img className='thread-opimage' src={ thread.image } />

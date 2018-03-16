@@ -3,8 +3,13 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import {Link} from 'react-router';
 
+import { fetchBoards } from '../../actions/boards/get-boards';
 
 class BoardList extends Component {
+  componentWillMount() {
+     this.props.dispatch(fetchBoards())
+  }
+
   createListItems() {
     return this.props.boards.map((board) => {
       return (
@@ -28,7 +33,7 @@ class BoardList extends Component {
 
 function mapStateToProps(state) {
   return {
-    boards: state.boards
+    boards: state.boards.boards
   };
 }
 
