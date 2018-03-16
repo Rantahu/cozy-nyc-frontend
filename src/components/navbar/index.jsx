@@ -3,7 +3,6 @@ import {IndexLink, Link} from 'react-router'
 import {connect} from 'react-redux';
 
 import SidebarMenu from './sidebar-menu';
-import ProfileMenu from './profile-menu';
 
 import ProfileButton from '../profiles/profile-button';
 
@@ -19,21 +18,12 @@ class Navbar extends Component {
   openSidebarMenu(){
     this.setState({
       showSidebarMenu: true,
-      showProfileMenu: false
-    });
-  }
-
-  openProfileMenu(){
-    this.setState({
-      showProfileMenu:true,
-      showSidebarMenu: false
     });
   }
 
   closeNavMenu(){
     this.setState({
       showSidebarMenu: false,
-      showProfileMenu: false
     });
   }
 
@@ -53,24 +43,14 @@ class Navbar extends Component {
             </span>
           </div>);
 
-      const profilemenu = ( this.state.showProfileMenu ?
-        <div id="navbar-profile">
-          <span onClick={ () => this.closeNavMenu() }>
-            <ProfileButton />
-          </span>
-          <ProfileMenu />
-          <span className="sidebar-exit" onClick={ () => this.closeNavMenu() }> </span>
-        </div>
-      : <div id="navbar-profile" onClick={ () => this.openProfileMenu() }>
-          <ProfileButton />
-        </div>);
-
       return (
         <div id="navbar">
 
           { sidebarmenu }
 
-          { profilemenu }
+          <div id="navbar-profile">
+              <ProfileButton />
+          </div>
 
           <div className='u-cf'></div>
 
